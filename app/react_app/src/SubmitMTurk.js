@@ -34,18 +34,29 @@ class SubmitMTurk extends React.Component {
         axios.post(this.state.mturk.sandbox_end_point, {assignmentId: this.state.mturk.assignment_id, foo: 'bar'}).then(res => {
             this.setState({complete: true});
             console.log(res);
-        }).catch(function (error) {
+            this.notifyBackendToCompleteTask();
+        }).catch( (error) => {
             // handle error
             console.log(error);
         });
 
-        axios.post(this.state.mturk.production_end_point, {assignmentId: this.state.mturk.assignment_id, foo: 'bar'}).then(res => {
-            this.setState({complete: true});
+        axios.post(this.state.mturk.production_end_point, {assignmentId: this.state.mturk.assignment_id, foo: 'bar'}).then(res => {            
             console.log(res);
-        }).catch(function (error) {
+            this.setState({complete: true});
+            this.notifyBackendToCompleteTask();
+        }).catch( (error) => {
             // handle error
             console.log(error);
         });
+    }
+
+    notifyBackendToCompleteTask = () => {
+        console.log("trying to notify backend");
+        const url = window.location.href;            
+        axios.post(url+ "/update", 
+        Object.assign({}, this.state, {instruction: 'mark_complete'})).then(res => {            
+            this.setState(res.data);            
+        })
     }
 }
 

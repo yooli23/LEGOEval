@@ -1,4 +1,4 @@
-
+from components.submit_mturk.submit_mturk import SubmitMTurk
 
 def update(state, instruction):
 
@@ -14,5 +14,8 @@ def update(state, instruction):
             'sandbox_end_point': 'https://workersandbox.mturk.com/mturk/externalSubmit',
             'production_end_point': 'https://mturk.com/mturk/externalSubmit'
         }
+    
+    if instruction == 'mark_complete':
+        SubmitMTurk.mark_task_complete(state) #untested if this succeeds in marking db files as complete
     
     return state
