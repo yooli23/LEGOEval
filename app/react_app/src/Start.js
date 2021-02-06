@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import Page from './Page';
 import RandomExample from './RandomExample';
+import LoadMTurk from './LoadMTurk';
+import SubmitMTurk from './SubmitMTurk';
 // Import your new components here!
 
 
@@ -43,6 +45,12 @@ class Start extends React.Component {
 
               case 'RandomExample':
                 return <RandomExample advance={this.getLatestState}/>;
+
+              case 'LoadMTurk':
+                return <LoadMTurk advance={this.getLatestState}/>;
+
+              case 'SubmitMTurk':
+                return <SubmitMTurk advance={this.getLatestState}/>;
 
               // Add more components here :)
 

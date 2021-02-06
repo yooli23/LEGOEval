@@ -1,6 +1,12 @@
 # Framework Name TBA
 A Framework for Building Crowd Source Tasks.
 
+
+## Updating the front-end
+- run `npm install` inside of `react_app` if you run for first time
+- Remember to do `npm run build` inside of `react_app` anytime you change the front-end `js` files.
+
+
 ## State
 The `state` is a dictionary passed between the frontend, backend, and database.
 
