@@ -1,6 +1,7 @@
 from util.server_util import setup_server, delete_heroku_server
 import signal
 import time
+import sys
 
 THREAD_SHORT_SLEEP = 0.1
 
