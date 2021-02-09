@@ -1,6 +1,6 @@
 server = {
     'server_secret_key': 'secret',   
-    'port': 1234,
+    'port': 2988,
     'debug': False,
     'logger': False,    
 }

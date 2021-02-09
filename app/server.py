@@ -38,4 +38,4 @@ def update(task_id):
 
 
 if __name__ == '__main__':
-    app.run(port=config['port'], debug=config['debug'])
+    app.run(threaded=True, port=config['port'])
