@@ -8,7 +8,7 @@ from settings import server as config
 
 app = Flask(__name__, static_folder="react_app/build/static", template_folder="react_app/build")
 app.config['SECRET_KEY'] = config['server_secret_key']
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db' # os.environ["DATABASE_URL"]
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"] if "DATABASE_URL" in os.environ else 'sqlite:////tmp/test.db'
 
 
 db = SQLAlchemy(app)
