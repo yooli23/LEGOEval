@@ -15,7 +15,8 @@ from db_by_josh.query import Query
 import mturk.mturk_utils as mturk_utils
 from mturk.settings import mturk as mturk_config
 from mturk.settings import environments, worker_requirements
-from database import Database
+
+from app import db, TaskToHit, MTurk
 
 
 THREAD_SHORT_SLEEP = 0.1
@@ -54,9 +55,10 @@ class API:
                 task_id=task_id
             )
         try:
-            # link hit_id and hit_type_id        
-            Database.insert_into("mturk",  task_group_id=task_group_id, hit_id=hit_id, complete=0) # tested
-            Database.insert_into("task_to_hit",  task_id=task_id, hit_id=hit_id) # tested
+            # link hit_id and hit_type_id
+            db.session.add(MTurk(task_group_id, hit_id, complete=False))
+            db.session.add(TaskToHit(task_id, hit_id))
+            db.session.commit()            
             
             #save hit info locally
             self.hit_data = json.load(open(HIT_DATA_PATH))
@@ -134,9 +136,9 @@ class API:
         """
         Move through the whole hit_id list and attempt to expire the HITs
         """        
-        # THIS FUNCTION IS UNTESTED/NOT TESTED, but should work!
-        q = Query().select("mturk")
-        results = Database.query(q)
+        # THIS FUNCTION IS UNTESTED/NOT TESTED, but should work!        
+        results = MTurk.query.all()
+
         for hit in results:
             if hit.complete == 0 and hit.hit_id in self.hit_ids:
                 print(hit.hit_id)

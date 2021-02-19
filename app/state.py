@@ -1,8 +1,7 @@
 import json
+import time
 
-from db_by_josh.query import Query
-
-from database import Database
+from app import db, Task
 from build import pipeline
 from util.build_helper import PipelineHelper, Component, Compute
 from build import compute
@@ -17,18 +16,19 @@ class State:
         if data:
             self.data = data
 
-    def _load_from_db(self):
-        """Loads the state data from the database."""
-        q = Query().select("task").where("task_id").equals(self.task_id)
-        results = Database.query(q)
-        if not results:            
-            Database.insert_into(
-                "task",
-                task_id=self.task_id, 
-                state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)}))
+    def _load_from_db(self):        
+        """Loads the state data from the database."""        
+        result = Task.query.filter_by(task_id=self.task_id).first()
+        if not result:     
+            task = Task(
+                task_id=self.task_id,
+                state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)})
+            )
+            db.session.add(task)
+            db.session.commit()
             self._load_from_db()
         else:            
-            self.data = json.loads(results[0].state)
+            self.data = json.loads(result.state)
 
     def _calculate_component_if_needed(self):
         """Calcuates the 'component' key in the state if its None."""
@@ -60,13 +60,13 @@ class State:
 
     def save(self):
         """Saves the state to the database."""
-        q = Query().update("task").set("state").equals(json.dumps(self.data)).where("task_id").equals(self.task_id)
-        Database.query(q)    
+        task = Task.query.filter_by(task_id=self.task_id).first()
+        task.state = json.dumps(self.data)
+        db.session.commit()
 
     def advance(self):
         """Advances to the next component."""                    
         if len(self.data['pipeline']) > 1:
-            print(len(self.data['pipeline']), "popping..??!?!")
             self.data['pipeline'].pop(0)
             self._calculate_component_if_needed()
         else:            

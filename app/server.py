@@ -1,15 +1,15 @@
-from database import Database
-import os
+from flask import render_template, request
 
-from flask import Flask, request, send_from_directory, render_template, jsonify
-
+from app import app, db
 from settings import server as config
 from state import State
 from main_loop import update as update_fn
 
 
-app = Flask(__name__, static_folder="react_app/build/static", template_folder="react_app/build")
-app.config['SECRET_KEY'] = config['server_secret_key']
+@app.before_first_request
+def execute_this():
+    db.drop_all()
+    db.create_all()
 
 
 @app.route('/')
