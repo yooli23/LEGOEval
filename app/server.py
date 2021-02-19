@@ -8,7 +8,6 @@ from main_loop import update as update_fn
 
 @app.before_first_request
 def execute_this():
-    db.drop_all()
     db.create_all()
 
 
