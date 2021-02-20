@@ -145,6 +145,7 @@ def setup_heroku_server(
                 '{} create {}'.format(heroku_executable_path, heroku_app_name)
             )
         )
+    #TODO when the same app name is detected, push the changes instead of creating the new app
     except subprocess.CalledProcessError:  # User has too many apps
         sh.rm(shlex.split('-rf {}'.format(heroku_server_directory_path)))
         raise SystemExit(
@@ -184,6 +185,17 @@ def setup_heroku_server(
         os.remove(os.path.join(tmp_dir, 'heroku.tar.gz'))
 
     sh.rm(shlex.split('-rf {}'.format(heroku_server_development_path)))
+
+    # create the postgresql add on
+    try:
+        print("Creating the heroku postgresql addon...")
+        subprocess.check_output(
+            shlex.split('{} addons:create heroku-postgresql:hobby-dev --version=10 --app {}'.format(heroku_executable_path, heroku_app_name))
+        )
+        
+    except subprocess.CalledProcessError:
+        print("Fail to create the heroku postgresql addon")
+        pass
 
     return 'https://{}.herokuapp.com'.format(heroku_app_name)
 

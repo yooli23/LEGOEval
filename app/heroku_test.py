@@ -6,13 +6,13 @@ import sys
 THREAD_SHORT_SLEEP = 0.1
 
 if __name__ == '__main__':
-    addr = setup_server('yoolitest') # is this the name?
+    addr = setup_server('yoolitest') # different tasks can have different task names here
     print(addr)
     print("holy success")
     # heroku addons:create heroku-postgresql:hobby-dev
     def signal_handler(signal,frame):
         print('Terminate tasks...')
-        delete_heroku_server
+        #delete_heroku_server
         print('Done!')
         sys.exit(0)
 
