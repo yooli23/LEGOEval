@@ -1,8 +1,10 @@
-# from data_reader import (
-#     app, db, Task, MTurk, TaskToHit
-# )
+from pprint import pprint
+
+from util.data_reader import load_data
 
 
-# app.run()
-
-# print(Task.query.all())
+if __name__ == '__main__':
+    print("Loading...\n")
+    for data_point in load_data():
+        pprint(data_point)
+    print("\nDone!")
