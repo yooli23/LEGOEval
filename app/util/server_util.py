@@ -35,7 +35,11 @@ def setup_heroku_server(
 
     # Get the platform we are working on
     platform_info = platform.platform()
-    if 'Darwin' in platform_info:  # Mac OS X
+    print("ALERT!")
+    print(platform_info) # macOS-11.2.1-x86_64-i386-64bit
+    print("\n\n\n")
+
+    if 'Darwin' in platform_info or 'macOS' in platform_info:  # Mac OS X
         os_name = 'darwin'
     elif 'Linux' in platform_info:  # Linux
         os_name = 'linux'
