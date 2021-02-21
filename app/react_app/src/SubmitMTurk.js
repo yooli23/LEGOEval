@@ -15,53 +15,61 @@ class SubmitMTurk extends React.Component {
         const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
-                // this.submitTask();
-                this.setState({complete: true});
-                this.notifyBackendToCompleteTask();
+                this.submitTask();
             });            
         })      
     }
 
     render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;        
-        return (
-            <div>
-                <form action="https://mturk.com/mturk/externalSubmit" method="POST" onSubmit={this.handlePostSubmit}>
-                    <input type='text' onChange={this.myChangeHandler}/>
-                    <input type="hidden" name="assignmentId" id="assignmentId" value={this.state.mturk.assignment_id} />
-                    <input type="hidden" name="foo" id="foo" value="bar" />
-                    <input type="submit" name="submit" />
-                </form>
-            </div>
-        ); 
+        if (this.state.complete == true) {
+             return <p>Submitting your task, please be patient...</p>;        
+        }else{
+            return <p>Task Complete!</p>;
+        }        
     }    
 
-    handlePostSubmit = (e) => {
-        e.preventDefault();        
-        console.log("Form should have been submitted!");
+    submitTask = () => {
+        if (this.state.pipeline == undefined) {console.log("Error submitting task!"); return;}
+
+        var bodyFormData = new FormData();
+        bodyFormData.append('assignmentId', this.state.mturk.assignment_id);
+        bodyFormData.append('foo', 'boo');
+
+        axios({
+            method: 'post',
+            url: this.state.mturk.sandbox_end_point,
+            data: bodyFormData,
+            headers: {'Content-Type': 'multipart/form-data' }
+            })
+            .then(function (response) {
+                //handle success
+                console.log(response);
+                this.setState({complete: true});
+                this.notifyBackendToCompleteTask();
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+        });
+
+        axios({
+            method: 'post',
+            url: this.state.mturk.production_end_point,
+            data: bodyFormData,
+            headers: {'Content-Type': 'multipart/form-data' }
+            })
+            .then(function (response) {
+                //handle success
+                console.log(response);
+                this.setState({complete: true});
+                this.notifyBackendToCompleteTask();
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+        });        
     }
-
-    // submitTask = () => {
-    //     if (this.state.pipeline == undefined) {console.log("Error submitting task!"); return;}
-
-    //     axios.post(this.state.mturk.sandbox_end_point, {assignmentId: this.state.mturk.assignment_id, foo: 'bar'}).then(res => {
-    //         this.setState({complete: true});
-    //         console.log(res);
-    //         this.notifyBackendToCompleteTask();
-    //     }).catch( (error) => {
-    //         // handle error
-    //         console.log(error);
-    //     });
-
-    //     axios.post(this.state.mturk.production_end_point, {assignmentId: this.state.mturk.assignment_id, foo: 'bar'}).then(res => {            
-    //         console.log(res);
-    //         this.setState({complete: true});
-    //         this.notifyBackendToCompleteTask();
-    //     }).catch( (error) => {
-    //         // handle error
-    //         console.log(error);
-    //     });
-    // }
 
     notifyBackendToCompleteTask = () => {
         console.log("trying to notify backend");
