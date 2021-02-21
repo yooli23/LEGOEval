@@ -23,7 +23,7 @@ class SubmitMTurk extends React.Component {
     render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;        
         return (
-            <form name="mturk_form" method="post" id="mturk_form" action={this.state.mturk.production_end_point}>
+            <form name="mturk_form" method="post" id="mturk_form" action={this.state.mturk.sandbox_end_point}>
               <input type="hidden" value='' name="assignmentId" id={this.state.mturk.assignment_id}/>
               <input type="submit"/>
             </form>
@@ -46,7 +46,7 @@ class SubmitMTurk extends React.Component {
             method: 'post',
             url: this.state.mturk.sandbox_end_point,
             data: bodyFormData,
-            headers: {'Content-Type': 'multipart/form-data' }
+            // headers: {'Content-Type': 'multipart/form-data' }
             })
             .then(function (response) {
                 //handle success
