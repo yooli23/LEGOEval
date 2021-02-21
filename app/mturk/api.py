@@ -21,7 +21,7 @@ from app import db, TaskToHit, MTurk
 
 
 THREAD_SHORT_SLEEP = 0.1
-HIT_DATA_PATH = "./mturk/hit_data"
+HIT_DATA_PATH = "./hit_data"
 SUBMIT_STATUS = 'Submitted'
 APPROVE_TIME_LIMIT = 4
 
