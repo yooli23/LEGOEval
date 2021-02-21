@@ -24,6 +24,11 @@ class LoadMTurk extends React.Component {
 
     requestMTurkInfo = () => {
         // const url = window.location.href;     
+
+        // Tmp test
+        console.log("test!");
+        console.log(window.location.href.split('?')[1]);
+
         const url = window.location.href.split('?')[0];       
         axios.post(url+ "/update", 
         Object.assign({}, this.state, {instruction: 'load_mturk'})).then(res => {            
@@ -38,7 +43,7 @@ class LoadMTurk extends React.Component {
     }
 
     popComponent = () => {        
-        // const url = window.location.href;    
+        // const url = window.location.href;        
         const url = window.location.href.split('?')[0];        
         axios.post(url+ "/update", 
         Object.assign({}, this.state, {instruction: 'advance'})).then(res => {            
