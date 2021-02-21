@@ -26,8 +26,16 @@ class LoadMTurk extends React.Component {
         const assignmentID = window.location.href.split('?')[1].split("=")[1];
         const url = window.location.href.split('?')[0];     
 
+        var end_point_val = "";
+
+        if (url.includes("sandbox")) {
+            end_point_val = "https://workersandbox.mturk.com/mturk/externalSubmit";
+        }else{
+            end_point_val = "https://mturk.com/mturk/externalSubmit";
+        }
+
         axios.post(url+ "/update",
-            Object.assign({}, this.state, {instruction: 'advance', mturk: {assignment_id: assignmentID, sandbox_end_point:"https://workersandbox.mturk.com/mturk/externalSubmit", production_end_point:"https://mturk.com/mturk/externalSubmit"}})).then(res => {            
+            Object.assign({}, this.state, {instruction: 'advance', mturk: {assignment_id: assignmentID, end_point: end_point_val}})).then(res => {            
                 this.setState(res.data);  
                 this.props.advance();          
         })
