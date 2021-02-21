@@ -11,7 +11,8 @@ class SubmitMTurk extends React.Component {
 
     componentDidMount() {      
         this.setState({complete: false});
-        const url = window.location.href;            
+        // const url = window.location.href;            
+        const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
                 this.submitTask();
@@ -52,7 +53,8 @@ class SubmitMTurk extends React.Component {
 
     notifyBackendToCompleteTask = () => {
         console.log("trying to notify backend");
-        const url = window.location.href;            
+        // const url = window.location.href;           
+        const url = window.location.href.split('?')[0]; 
         axios.post(url+ "/update", 
         Object.assign({}, this.state, {instruction: 'mark_complete'})).then(res => {            
             this.setState(res.data);            

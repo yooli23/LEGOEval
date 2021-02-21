@@ -5,7 +5,8 @@ class Survey extends React.Component {
 
     componentDidMount() {        
         // call init function
-        const url = window.location.href;    
+        // const url = window.location.href;  
+        const url = window.location.href.split('?')[0];  
         var data;  
         axios.get(url+ "/init").then(res => {
           data = res.data;    // arguments will come from the data         

@@ -11,7 +11,8 @@ class RandomExample extends React.Component {
     }
 
     componentDidMount() {      
-        const url = window.location.href;            
+        // const url = window.location.href;            
+        const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
         })      
@@ -29,7 +30,8 @@ class RandomExample extends React.Component {
     }    
 
     printInBackend = () => {        
-        const url = window.location.href;            
+        // const url = window.location.href;    
+        const url = window.location.href.split('?')[0];        
         axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'print'})).then(res => {
             this.setState(res.data);                     
         })

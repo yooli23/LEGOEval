@@ -21,7 +21,8 @@ class Start extends React.Component {
     }    
         
     getLatestState = () => {      
-      const url = window.location.href;
+      // const url = window.location.href;
+      const url = window.location.href.split('?')[0];
       axios.get(url+ "/init").then((res) => {     
         console.log(res);
         console.log("---");
