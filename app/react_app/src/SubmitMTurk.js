@@ -15,7 +15,9 @@ class SubmitMTurk extends React.Component {
         const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
-                this.submitTask();
+                // this.submitTask();
+                this.setState({complete: true});
+                this.notifyBackendToCompleteTask();
             });            
         })      
     }
@@ -35,30 +37,30 @@ class SubmitMTurk extends React.Component {
         // }        
     }    
 
-    submitTask = () => {
-        if (this.state.pipeline == undefined) {console.log("Error submitting task!"); return;}
+    // submitTask = () => {
+    //     if (this.state.pipeline == undefined) {console.log("Error submitting task!"); return;}
 
-        var bodyFormData = new FormData();
-        bodyFormData.append('assignmentId', this.state.mturk.assignment_id);
-        bodyFormData.append('foo', 'boo');
+    //     var bodyFormData = new FormData();
+    //     bodyFormData.append('assignmentId', this.state.mturk.assignment_id);
+    //     bodyFormData.append('foo', 'boo');
 
-        axios({
-            method: 'post',
-            url: this.state.mturk.end_point,
-            data: bodyFormData,
-            // headers: {'Content-Type': 'multipart/form-data' }
-            })
-            .then(function (response) {
-                //handle success
-                console.log(response);
-                this.setState({complete: true});
-                this.notifyBackendToCompleteTask();
-            })
-            .catch(function (response) {
-                //handle error
-                console.log(response);
-        });
-    }
+    //     axios({
+    //         method: 'post',
+    //         url: this.state.mturk.end_point,
+    //         data: bodyFormData,
+    //         // headers: {'Content-Type': 'multipart/form-data' }
+    //         })
+    //         .then(function (response) {
+    //             //handle success
+    //             console.log(response);
+    //             this.setState({complete: true});
+    //             this.notifyBackendToCompleteTask();
+    //         })
+    //         .catch(function (response) {
+    //             //handle error
+    //             console.log(response);
+    //     });
+    // }
 
     notifyBackendToCompleteTask = () => {
         console.log("trying to notify backend");
