@@ -156,13 +156,14 @@ def setup_heroku_server(
     # Create or attach to the server
     bool_new_app = True
     try:
-        subprocess.call(
+        subprocess.check_output(
             shlex.split(
                 '{} create {}'.format(heroku_executable_path, heroku_app_name)
             )
         )
-    except subprocess.CalledProcessError:
+    except Exception as error:
         # if the app has been created
+        print("This app exists, trying to push new changes...")
         bool_new_app = False
         if task_name in app_names:
             pass
@@ -176,7 +177,7 @@ def setup_heroku_server(
                 'verify your account to allow more concurrent apps'
             )
     try:
-        subprocess.call(
+        subprocess.check_output(
             shlex.split(
                 '{} git:remote -a {}'.format(heroku_executable_path, heroku_app_name)
             )
