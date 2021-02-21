@@ -11,6 +11,7 @@ import shlex
 import shutil
 import subprocess
 import time
+import json
 
 region_name = 'us-east-1'
 user_name = getpass.getuser()
@@ -137,25 +138,61 @@ def setup_heroku_server(
 
     while heroku_app_name[-1] == '-':
         heroku_app_name = heroku_app_name[:-1]
+    
+    # Save the task name and app name to retrieve data in the future
+    os.chdir(parent_dir)
+    app_names = {}
+    if os.path.exists('appname.json'):
+        f = open('appname.json', 'r')
+        content = f.read()
+        app_names = json.loads(content)
+        f.close()
 
+    os.chdir(heroku_server_directory_path)
     # Create or attach to the server
+    bool_new_app = True
     try:
-        subprocess.check_output(
+        subprocess.call(
             shlex.split(
                 '{} create {}'.format(heroku_executable_path, heroku_app_name)
             )
         )
-    #TODO when the same app name is detected, push the changes instead of creating the new app
-    except subprocess.CalledProcessError:  # User has too many apps
-        sh.rm(shlex.split('-rf {}'.format(heroku_server_directory_path)))
-        raise SystemExit(
-            'You have hit your limit on concurrent apps with heroku, which are'
-            ' required to run multiple concurrent tasks.\nPlease wait for some'
-            ' of your existing tasks to complete. If you have no tasks '
-            'running, login to heroku and delete some of the running apps or '
-            'verify your account to allow more concurrent apps'
+    except subprocess.CalledProcessError:
+        # if the app has been created
+        bool_new_app = False
+        if task_name in app_names:
+            pass
+        else:
+            sh.rm(shlex.split('-rf {}'.format(heroku_server_directory_path)))
+            raise SystemExit(
+                'You have hit your limit on concurrent apps with heroku, which are'
+                ' required to run multiple concurrent tasks.\nPlease wait for some'
+                ' of your existing tasks to complete. If you have no tasks '
+                'running, login to heroku and delete some of the running apps or '
+                'verify your account to allow more concurrent apps'
+            )
+    try:
+        subprocess.call(
+            shlex.split(
+                '{} git:remote -a {}'.format(heroku_executable_path, heroku_app_name)
+            )
         )
+    except subprocess.CalledProcessError:
+        raise SystemExit(
+                'Setting git remote error! Please check the appname.json file under git root path and '
+                'make sure all the apps are running in your heroku account.'
+            )
 
+    # if this task is not in the app list, add it to the app names json file.
+    if task_name not in app_names or (task_name in app_names and app_names[task_name] != heroku_app_name):
+        app_names[task_name] = heroku_app_name
+        b = json.dumps(app_names)
+        os.chdir(parent_dir)
+        f2 = open('appname.json', 'w')
+        f2.write(b)
+        f2.close()
+    
+    os.chdir(heroku_server_directory_path)
     # Enable WebSockets
     try:
         subprocess.check_output(
@@ -186,16 +223,17 @@ def setup_heroku_server(
 
     sh.rm(shlex.split('-rf {}'.format(heroku_server_development_path)))
 
-    # create the postgresql add on
-    try:
-        print("Creating the heroku postgresql addon...")
-        subprocess.check_output(
-            shlex.split('{} addons:create heroku-postgresql:hobby-dev --version=10 --app {}'.format(heroku_executable_path, heroku_app_name))
-        )
-        
-    except subprocess.CalledProcessError:
-        print("Fail to create the heroku postgresql addon")
-        pass
+    # create the postgresql add on if creating a new app
+    if bool_new_app:
+        try:
+            print("Creating the heroku postgresql addon...")
+            subprocess.check_output(
+                shlex.split('{} addons:create heroku-postgresql:hobby-dev --version=10 --app {}'.format(heroku_executable_path, heroku_app_name))
+            )
+            
+        except subprocess.CalledProcessError:
+            print("Fail to create the heroku postgresql addon")
+            pass
 
     return 'https://{}.herokuapp.com'.format(heroku_app_name)
 

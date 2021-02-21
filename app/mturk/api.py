@@ -15,6 +15,7 @@ from db_by_josh.query import Query
 import mturk.mturk_utils as mturk_utils
 from mturk.settings import mturk as mturk_config
 from mturk.settings import environments, worker_requirements
+from util.server_util import setup_server, delete_heroku_server
 
 from app import db, TaskToHit, MTurk
 
@@ -46,13 +47,14 @@ class API:
         with open(HIT_DATA_PATH, 'w') as file:
             json.dump(self.hit_data, file)
 
-    def create_hit(self, hit_type_id, task_group_id):
+    def create_hit(self, hit_type_id, task_group_id, task_link):
         # Generate random string as the task_id
         task_id = str(uuid.uuid4())
         # Create the HIT
         hit_link, hit_id, response = mturk_utils.create_hit_with_hit_type(
                 hit_type_id=hit_type_id,
-                task_id=task_id
+                task_id=task_id,
+                task_link = task_link
             )
         try:
             # link hit_id and hit_type_id
@@ -80,7 +82,7 @@ class API:
 
         print(hit_info['id'], hit_info['preview'])
     
-    def running_task(self):
+    def running_task(self, task_name):
         # See if there's enough money in the account to fund the HITs requested
         num_hits = mturk_config['num_hits']
         reward_opt = {
@@ -113,11 +115,12 @@ class API:
             qualifications=qualifications,
             auto_approve_delay=mturk_config['auto_approval_delay'],
         )
-        
+        # create the task link on heroku
+        task_link = setup_server(task_name)
         for hit_idx in range(mturk_config['num_hits']):
             try:
                 # Create hit
-                self.create_hit(hit_type_id, self.task_group_id)
+                self.create_hit(hit_type_id, self.task_group_id, task_link)
             except Exception as error:
                 print(error)
         

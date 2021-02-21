@@ -339,11 +339,11 @@ def create_hit_type(
     return hit_type_id
 
 
-def create_hit_with_hit_type(hit_type_id, task_id: str):
+def create_hit_with_hit_type(hit_type_id, task_id: str, task_link: str):
     """
     Creates the actual HIT given the type and page to direct clients to.
     """
-    complete_url = config['page_url'] + task_id
+    complete_url = task_link + task_id
     page_url = complete_url.replace('&', '&amp;')
     amazon_ext_url = (
         'http://mechanicalturk.amazonaws.com/'
