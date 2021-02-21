@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 
 class SubmitMTurk extends React.Component {
@@ -15,30 +16,27 @@ class SubmitMTurk extends React.Component {
         const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
-                // this.submitTask();
-                this.setState({complete: true});
                 this.notifyBackendToCompleteTask();
             });            
         })      
     }
 
-    render() {        
+    render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;
         return (
-            <form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/">
+            <form name="mturk_form" method="post" id="mturk_form" action={this.state.mturk.end_point}>
                 <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
                 <input type="hidden" value='foo' name="bar"/>
-                <input type="submit"/>
+                <input type="hidden" value={this.state.mturk.end_point} name = "end_point"/>
+                <Button type="submit">Click here to finish task</Button>
             </form>
         );     
-    }   
+    }
 
-    notifyBackendToCompleteTask = () => {
-        console.log("trying to notify backend");
-        // const url = window.location.href;           
+    notifyBackendToCompleteTask = () => {        
         const url = window.location.href.split('?')[0]; 
-        axios.post(url+ "/update", 
-        Object.assign({}, this.state, {instruction: 'mark_complete'})).then(res => {            
+        axios.post(url+ "/update",
+        Object.assign({}, this.state, {instruction: 'mark_complete', complete: true})).then(res => {            
             this.setState(res.data);            
         })
     }

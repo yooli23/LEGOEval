@@ -10,8 +10,7 @@ class Page extends React.Component {
       this.state = {};
     }
 
-    componentDidMount() {      
-        // const url = window.location.href;  
+    componentDidMount() {
         const url = window.location.href.split('?')[0];          
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
@@ -30,11 +29,10 @@ class Page extends React.Component {
       );
     }    
 
-    popComponent = () => {        
-        // const url = window.location.href;
+    popComponent = () => {
         const url = window.location.href.split('?')[0];            
         axios.post(url+ "/update", 
-        Object.assign({}, this.state, {instruction: 'advance'})).then(res => {            
+        Object.assign({}, this.state, {instruction: 'advance'})).then(res => {
             this.setState(res.data);             
             this.props.advance();             
         })

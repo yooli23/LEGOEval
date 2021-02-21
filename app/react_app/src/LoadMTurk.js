@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 
 class LoadMTurk extends React.Component {
@@ -11,29 +12,24 @@ class LoadMTurk extends React.Component {
 
     componentDidMount() {      
         // const url = window.location.href;    
-        const url = window.location.href.split('?')[0];        
+        const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
             this.requestMTurkInfo();
-        })      
+        })
     }
 
     render() {
-      return <p>Loading MTurk information...</p>;
+        return <Button onClick={this.requestMTurkInfo} variant="contained" color="primary">Start Task</Button>;
     }    
 
     requestMTurkInfo = () => {
-        const assignmentID = window.location.href.split('?')[1].split("=")[1];
         const url = window.location.href.split('?')[0];     
-
-        var end_point_val = "";
-
-        if (url.includes("sandbox")) {
-            end_point_val = "https://workersandbox.mturk.com/mturk/externalSubmit";
-        }else{
-            end_point_val = "https://mturk.com/mturk/externalSubmit";
-        }
-
+        const assignmentID = window.location.href.split('?')[1].split('&')[0].split("=")[1];
+        if (assignmentID.includes("ASSIGNMENT_ID_NOT_AVAILABLE")) return;                
+        var end_point_val = window.location.href.split('?')[1].split("&")[3].split("=")[1] + "/mturk/externalSubmit";        
+        end_point_val = decodeURIComponent(end_point_val);
+        console.log(end_point_val);
         axios.post(url+ "/update",
             Object.assign({}, this.state, {instruction: 'advance', mturk: {assignment_id: assignmentID, end_point: end_point_val}})).then(res => {            
                 this.setState(res.data);  
