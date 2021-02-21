@@ -23,32 +23,13 @@ class LoadMTurk extends React.Component {
     }    
 
     requestMTurkInfo = () => {
-        // const url = window.location.href;     
+        const assignmentID = window.location.href.split('?')[1].split("=")[1];
+        const url = window.location.href.split('?')[0];     
 
-        // Tmp test
-        console.log("test!");
-        console.log(window.location.href.split('?')[1]);
-
-        const url = window.location.href.split('?')[0];       
-        axios.post(url+ "/update", 
-        Object.assign({}, this.state, {instruction: 'load_mturk'})).then(res => {            
-            this.setState(res.data);             
-            if (res.data.mturk != null) { // we assume they filled out mturk correctly
-                this.popComponent()
-            }else{
-                // do nothing if error loading mturk data
-                console.log(res.data);
-            }
-        })
-    }
-
-    popComponent = () => {        
-        // const url = window.location.href;        
-        const url = window.location.href.split('?')[0];        
-        axios.post(url+ "/update", 
-        Object.assign({}, this.state, {instruction: 'advance'})).then(res => {            
-            this.setState(res.data);             
-            this.props.advance();             
+        axios.post(url+ "/update",
+            Object.assign({}, this.state, {instruction: 'advance', mturk: {assignment_id: assignmentID, sandbox_end_point:"https://workersandbox.mturk.com/mturk/externalSubmit", production_end_point:"https://mturk.com/mturk/externalSubmit"}})).then(res => {            
+                this.setState(res.data);  
+                this.props.advance();          
         })
     }
 }
