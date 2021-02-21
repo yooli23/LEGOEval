@@ -23,12 +23,9 @@ class SubmitMTurk extends React.Component {
     }
 
     render() {        
-        if (this.state.pipeline == undefined) return <p>Loading...</p>;        
-        console.log("---");
-        console.log(this.state.mturk.assignment_id);
-        console.log("xxx");
+        if (this.state.pipeline == undefined) return <p>Loading...</p>;
         return (
-            <form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/mturk/externalSubmit">
+            <form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/">
                 <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
                 <input type="hidden" value='foo' name="bar"/>
                 <input type="submit"/>
