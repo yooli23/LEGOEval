@@ -24,6 +24,8 @@ class Start extends React.Component {
       const url = window.location.href;
       axios.get(url+ "/init").then((res) => {     
         console.log(res);
+        console.log("---");
+        console.log(res.data);
         if (res != null) {
           this.setState(res.data);
         }         
