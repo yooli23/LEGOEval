@@ -22,8 +22,11 @@ class Start extends React.Component {
         
     getLatestState = () => {      
       const url = window.location.href;
-      axios.get(url+ "/init").then((res) => {        
-        this.setState(res.data);        
+      axios.get(url+ "/init").then((res) => {     
+        console.log(res);
+        if (res != null) {
+          this.setState(res.data);
+        }         
       }).catch((error)=>{
         console.log(error);
      });
