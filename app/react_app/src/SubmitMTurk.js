@@ -22,35 +22,17 @@ class SubmitMTurk extends React.Component {
         })      
     }
 
-    render() {
+    render() {        
         if (this.state.pipeline == undefined) return <p>Loading...</p>;        
+        console.log("---");
+        console.log(this.state.mturk.assignment_id);
+        console.log("xxx");
         return (
-            <div>
-                <form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/mturk/externalSubmit">
+            <form name="mturk_form" method="post" id="mturk_form" action="https://workersandbox.mturk.com/mturk/externalSubmit">
                 <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
                 <input type="hidden" value='foo' name="bar"/>
                 <input type="submit"/>
-                </form>
-
-                <form name="mturk_form2" method="post" id="mturk_form2" action="workersandbox.mturk.com/mturk/externalSubmit">
-                <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
-                <input type="hidden" value='foo' name="bar"/>
-                <input type="submit"/>
-                </form>
-
-                <form name="mturk_form3" method="post" id="mturk_form3" action="/mturk/externalSubmit">
-                <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
-                <input type="hidden" value='foo' name="bar"/>
-                <input type="submit"/>
-                </form>
-
-                <form name="mturk_form4" method="post" id="mturk_form4" action="mturk/externalSubmit">
-                <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
-                <input type="hidden" value='foo' name="bar"/>
-                <input type="submit"/>
-                </form>                                
-
-            </div>
+            </form>
         );     
     }   
 
