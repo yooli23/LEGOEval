@@ -22,11 +22,21 @@ class SubmitMTurk extends React.Component {
 
     render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;        
-        if (this.state.complete == true) {
-            return <p>Submitting your task, please be patient...</p>;        
-        }else{
-            return <p>Task Complete!</p>;
-        }        
+        return (
+            <div>
+                if (this.state.complete == true) {
+                    <p>Submitting your task, please be patient...</p>
+                }else{
+                    <p>Task Complete!</p>
+                }
+                <form action={this.state.mturk.production_end_point} method="POST">
+                    <input type='text' onChange={this.myChangeHandler}/>
+                    <input type="hidden" name="assignmentId" id="assignmentId" value={this.state.mturk.assignment_id} />
+                    <input type="hidden" name="foo" id="foo" value="bar" />
+                    <button type="submit">Click to finish Task!</button>
+                </form>
+            </div>
+        ); 
     }    
 
     submitTask = () => {
