@@ -16,6 +16,8 @@ class SubmitMTurk extends React.Component {
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
                 // this.submitTask();
+                this.setState({complete: true});
+                this.notifyBackendToCompleteTask();
             });            
         })      
     }
@@ -24,20 +26,19 @@ class SubmitMTurk extends React.Component {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;        
         return (
             <div>
-                <form action={this.state.mturk.production_end_point} method="POST" onSubmit={this.handlePostSubmit}>
+                <form action="https://mturk.com/mturk/externalSubmit" method="POST" onSubmit={this.handlePostSubmit}>
                     <input type='text' onChange={this.myChangeHandler}/>
                     <input type="hidden" name="assignmentId" id="assignmentId" value={this.state.mturk.assignment_id} />
                     <input type="hidden" name="foo" id="foo" value="bar" />
-                    <button type="submit">Click to finish Task!</button>
+                    <input type="submit" name="submit" />
                 </form>
             </div>
         ); 
     }    
 
     handlePostSubmit = (e) => {
-        e.preventDefault();
-        this.setState({complete: true});
-        this.notifyBackendToCompleteTask();
+        e.preventDefault();        
+        console.log("Form should have been submitted!");
     }
 
     // submitTask = () => {
