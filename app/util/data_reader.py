@@ -5,11 +5,17 @@ import  sqlalchemy as db
 
 
 def get_database_url(task_name):
-    with open("../appname.json", "r") as f:
-        app_name = json.loads(f.read())[task_name]
-        print(f"Reading database for {app_name}")
-    result = subprocess.check_output(['heroku', 'config:get', 'DATABASE_URL',  '-a',  f'{app_name}'])
-    return result.decode('ascii').strip()
+    try:
+        with open("../appname.json", "r") as f:
+            loaded_dict = json.loads(f.read())
+            if task_name not in loaded_dict:
+                raise RuntimeError("Uh oh. This task name does not exist!")
+            app_name = loaded_dict[task_name]
+            print(f"Reading database for {app_name}")
+        result = subprocess.check_output(['heroku', 'config:get', 'DATABASE_URL',  '-a',  f'{app_name}'])
+        return result.decode('ascii').strip()
+    except:
+        raise RuntimeError('"appname.json" in ../app does not exist! Please run the task first via launch_hits.py!')
 
 
 def query_raw_data(task_name):

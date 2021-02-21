@@ -5,7 +5,7 @@ from util.data_reader import load_data
 
 if __name__ == '__main__':
     print("Loading...\n")
-    task_name = "jarnold997"
+    task_name = "my-task-name-here"
     for data_point in load_data(task_name):
         pprint(data_point)
     print("\nDone!")
