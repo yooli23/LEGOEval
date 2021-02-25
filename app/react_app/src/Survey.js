@@ -20,6 +20,7 @@ class Survey extends React.Component {
 
     render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;
+
         const data = this.state.pipeline[0].data;
         let json = {};
         if (data.hasOwnProperty("questions")) {
@@ -29,9 +30,9 @@ class Survey extends React.Component {
             }
         }
         let model = new Surveys.Model(json);
-        model.onComplete.add(this.popComponent);
+
         return (
-          <Surveys.Survey model={model}/>
+          <Surveys.Survey model={model} onComplete={this.popComponent}/>
         );
     }
 
@@ -71,9 +72,19 @@ class Survey extends React.Component {
         return parsed;
     }
 
-    popComponent = () => {
+    popComponent = (survey, options) => {
+
+        const data = this.state.pipeline[0].data;
+
+        var surveyTitleStr = data.title;
+        var surveyData = JSON.stringify(survey.data);
+
+        var updateVal = {};
+        updateVal['instruction'] = 'advance';
+        updateVal[surveyTitleStr] = surveyData
+
         const url = window.location.href.split('?')[0];
-        axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'advance'})).then(res => {
+        axios.post(url+ "/update", Object.assign({}, this.state, updateVal)).then(res => {
             this.setState(res.data);
             this.props.advance();
         })
