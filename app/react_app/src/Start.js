@@ -6,6 +6,7 @@ import Page from './Page';
 import RandomExample from './RandomExample';
 import LoadMTurk from './LoadMTurk';
 import SubmitMTurk from './SubmitMTurk';
+import Survey from './Survey'
 // Import your new components here!
 
 
@@ -23,10 +24,7 @@ class Start extends React.Component {
     getLatestState = () => {      
       // const url = window.location.href;
       const url = window.location.href.split('?')[0];
-      axios.get(url+ "/init").then((res) => {     
-        console.log(res);
-        console.log("---");
-        console.log(res.data);
+      axios.get(url+ "/init").then((res) => {        
         if (res != null) {
           this.setState(res.data);
         }         
@@ -57,6 +55,9 @@ class Start extends React.Component {
 
               case 'SubmitMTurk':
                 return <SubmitMTurk advance={this.getLatestState}/>;
+
+              case 'Survey':
+                return <Survey advance={this.getLatestState}/>;
 
               // Add more components here :)
 
