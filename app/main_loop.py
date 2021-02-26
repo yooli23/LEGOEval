@@ -10,9 +10,5 @@ def update(state, instruction):
 
     if instruction == 'mark_complete':
         SubmitMTurk.mark_task_complete(state) #untested if this succeeds in marking db files as complete
-
-    print("The data!")
-    print(state.data)
-    print("---")
     
     return state
