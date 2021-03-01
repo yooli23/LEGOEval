@@ -7,6 +7,7 @@ import RandomExample from './RandomExample';
 import LoadMTurk from './LoadMTurk';
 import SubmitMTurk from './SubmitMTurk';
 import Survey from './Survey'
+import MyChatbot from "./chatbot/Chatbot";
 // Import your new components here!
 
 
@@ -58,6 +59,9 @@ class Start extends React.Component {
 
               case 'Survey':
                 return <Survey advance={this.getLatestState}/>;
+
+              case 'MyChatbot':
+                return <MyChatbot advance={this.getLatestState}/>;
 
               // Add more components here :)
 

@@ -4,6 +4,7 @@ from components.random_example.random_example import RandomExample
 from components.load_mturk.load_mturk import LoadMTurk
 from components.submit_mturk.submit_mturk import SubmitMTurk
 from components.survey.survey import Survey, RadioGroup, CheckBox, Text, Rating, Matrix, Comment
+from components.chatbot.chatbot import Chatbot
 
 
 compute = {}
@@ -11,17 +12,22 @@ compute = {}
 pipeline = []
 
 
+# Load MTurk
 load = LoadMTurk()
-pipeline.append(load.component)
+# pipeline.append(load.component)
 
-
+# Page
 start = Page()
 start.title = "Hello, world!"
 start.description = "These are my instructions."
 start.button = "Continue"
 pipeline.append(start.component) 
 
+# Chatbot
+chatbot = Chatbot(identifier="chatbot_1")
+pipeline.append(chatbot.component)
 
+# Survey
 survey = Survey()
 survey.title = "Task Survey"
 text1 = Text("name", "What is your name?")
@@ -45,13 +51,13 @@ comment1 = Comment("feedback", "Any advice to help us improve?")
 survey.questions.append(comment1.toJson())
 pipeline.append(survey.component)
 
-
+# Page
 end = Page()
 end.title = "Finished Task"
 end.description = "You completed the task!"
 end.button = "Done"
 pipeline.append(end.component)
 
-
+# Submit MTurk
 submit = SubmitMTurk()
-pipeline.append(submit.component)
+# pipeline.append(submit.component)
