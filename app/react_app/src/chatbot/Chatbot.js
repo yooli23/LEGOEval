@@ -1,38 +1,28 @@
 import React from "react";
-import Chatbot from "react-chatbot-kit";
-
-import config from "./chatbotConfig";
-import MessageParser from "./MessageParser";
-// import ActionProvider from "./ActionProvider";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
-
-
+import '../App.css';
 
 
 class MessageList extends React.Component {
   render() {
-    return (
-      <ul className="message-list">                 
-        {this.props.messages.map(message => {
-          return (
-           <li key={message.id}>
-             <div>
-               {message.senderId}
-             </div>
-             <div>
-               {message.text}
-             </div>
-           </li>
-         )
-       })}
-     </ul>
+    return (      
+        <div className="message-list" style={{width: 500}}>                 
+            {this.props.messages.map(message => {
+                return (
+                  <div class="bubbleWrapper">
+                    <div class={"You" == message.senderId ? "inlineContainer own" : "inlineContainer"}>
+                      <div className={"You" != message.senderId ?"otherBubble other" : "ownBubble own"}>{message.text}</div>
+                    </div>
+                    <span className={"You" != message.senderId ?"other" : "own"}>{message.senderId}</span>
+                  </div>
+                )
+              })
+            }
+      </div>
     )
   }
 }
-
-
-
 
 
 class MyChatbot extends React.Component{
@@ -55,10 +45,11 @@ class MyChatbot extends React.Component{
         if (this.state.pipeline === undefined) return <p>Loading...</p>;
         const data = this.state.pipeline[0].data;
         return (
-            <div>
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>
+            <p style = {{marginBottom: 20}}>Please send messages until the task will automatically end.</p>
               <MessageList messages={this.state.messages} />
-              <input type="text" placeholder="add a new todo..." value={this.state.text} onChange={this.textChanged} />
-              <Button onClick={this.sendMessage}>Send</Button> 
+              <input type="text" placeholder="Type message here..." value={this.state.text} onChange={this.textChanged} style={{marginTop: 40}} />
+              <Button onClick={this.sendMessage}>Send</Button>               
             </div>
           );
     }
@@ -73,8 +64,11 @@ class MyChatbot extends React.Component{
 
       // Update the user's message
       var data = this.state.messages;
-      data.push({id: this.state.messages.length, senderId: "You", text: this.state.text});
-      this.setState({messages: data}, function() {
+      data.push(
+        {id: this.state.messages.length, senderId: "You", text: this.state.text, direction: 'right'}
+      );
+
+      this.setState({messages: data, text: ""}, function() {
 
         // Send to backend, update data
         var title = this.state.pipeline[0].data.identifier;

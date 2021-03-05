@@ -9,8 +9,10 @@ def update(state, instruction):
         print("Printing from front end!")
 
     if instruction == 'request_message':        
-        state.data["messages"].append({'id':len(state.data["messages"]), 'senderId':'Robot', 'text': "Hello from backend!"})
-        if len(state.data["messages"]) >= 4:
+        state.data["messages"].append(
+            {'id':len(state.data["messages"]), 'senderId':'Robot', 'text': "Hello from backend!", 'direction': 'right'}
+        )
+        if len(state.data["messages"]) >= 8:
             state.advance()
 
     if instruction == 'mark_complete':
