@@ -33,11 +33,11 @@ class MyChatbot extends React.Component{
     }
 
     componentDidMount() {
-        const url = window.location.href;
+        const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
               // pass
-            });         
+            });
         })
     }
 
@@ -65,7 +65,7 @@ class MyChatbot extends React.Component{
       // Update the user's message
       var data = this.state.messages;
       data.push(
-        {id: this.state.messages.length, senderId: "You", text: this.state.text, direction: 'right'}
+        {id: this.state.messages.length, senderId: "You", text: this.state.text}
       );
 
       this.setState({messages: data, text: ""}, function() {

@@ -35,5 +35,9 @@ def load_data(task_name):
     for i in raw_data:
         d = json.loads(i[2])
         del d["pipeline"]
+        try:
+            del d['messages']
+            del d['text']
+        except: pass
         results.append(d)
     return results

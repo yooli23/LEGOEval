@@ -11,7 +11,7 @@ class Page extends React.Component {
     }
 
     componentDidMount() {
-        const url = window.location.href.split('?')[0];          
+        const url = window.location.href.split('?')[0]; 
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
         })      
