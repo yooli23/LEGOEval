@@ -14,8 +14,8 @@ pipeline = []
 
 
 # Load MTurk
-# load = LoadMTurk()
-# pipeline.append(load.component)
+load = LoadMTurk()
+pipeline.append(load.component)
 
 # Page
 start = Page()
@@ -65,5 +65,5 @@ end.button = "Done"
 pipeline.append(end.component)
 
 # Submit MTurk
-# submit = SubmitMTurk()
-# pipeline.append(submit.component)
+submit = SubmitMTurk()
+pipeline.append(submit.component)

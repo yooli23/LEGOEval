@@ -34,10 +34,12 @@ def load_data(task_name):
     raw_data = query_raw_data(task_name)
     for i in raw_data:
         d = json.loads(i[2])
-        del d["pipeline"]
-        try:
-            del d['messages']
-            del d['text']
-        except: pass
+        
+        for key in ['messages', 'text', 'compare_bot_a', 'compare_bot_b', 'compare_bot_preference', 'pipeline']:
+            try:
+                del d[key]
+            except:
+                pass
+
         results.append(d)
     return results
