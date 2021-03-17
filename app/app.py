@@ -15,6 +15,23 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"] if "DATABASE_
 db = SQLAlchemy(app)
 
 
+class CustomJSON(db.Model):
+    __tablename__ = 'custom_json'
+
+    id = db.Column(db.Integer, primary_key=True)
+    key = db.Column(db.String())        
+    count = db.Column(db.Integer())
+    json = db.Column(db.String())
+
+    def __init__(self, key, count, json):
+        self.key = key
+        self.json = json
+        self.count = count
+
+    def __repr__(self):
+        return f"CustomJSON<{self.id} {self.key} {self.count} {self.json}>"
+
+
 class TaskToHit(db.Model):
     __tablename__ = 'task_to_hit'
 
