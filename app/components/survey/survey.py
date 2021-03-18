@@ -4,9 +4,9 @@ import json
 
 class Survey:
 
-    def __init__(self):
-        self.title = ""
-        self.questions = []
+    def __init__(self, title = "", questions = []):
+        self.title = title
+        self.questions = questions
 
     @property
     def component(self):

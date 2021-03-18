@@ -67,12 +67,12 @@ class CompareChats extends React.Component {
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'row'}}>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>            
                     <MessageList messages={this.state.compare_bot_a} />
-                    <Button onClick={this.chooseConvoA}>Choose This Conversation</Button>    
+                    {this.props.showButtons ? <Button onClick={this.chooseConvoA} variant="contained" color="primary">Choose This Conversation</Button> : null}
                 </div>
 
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>            
-                    <MessageList messages={this.state.compare_bot_b} />
-                    <Button onClick={this.chooseConvoB}>Choose This Conversation</Button>    
+                    <MessageList messages={this.state.compare_bot_b} />                    
+                    {this.props.showButtons ? <Button onClick={this.chooseConvoB} variant="contained" color="primary">Choose This Conversation</Button> : null}
                 </div>
             </div>
         </div>

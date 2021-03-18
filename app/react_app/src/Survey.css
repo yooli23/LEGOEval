@@ -1,0 +1,48 @@
+.sv_qstn {
+    text-align: left;
+}
+
+.sv_qstn .sq-root {
+    border: 1px solid gray;
+    border-left: 3px solid #18a689;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.sv_qstn .sq-root-rg {
+    border-left: 3px solid cyan;
+}
+
+.sv_qstn .sq-root-cb {
+    border-left: 3px solid orange;
+}
+
+.sv_qstn .sq-root-text {
+    border-left: 3px solid maroon;
+}
+
+.sv_qstn .sq-root-rating {
+    border-left: 3px solid lightpink;
+}
+
+.sv_qstn .sq-root-matrix {
+    border-left: 3px solid lightgreen;
+    margin-right: fill;
+}
+.sv_qstn .sq-root-comment {
+    border-left: 3px solid mediumpurple;
+}
+
+.sq-title {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.sq-title-required {
+    color: red;
+}
+
+.sq-item:nth-child(1) {
+    margin-bottom: 5px;
+}

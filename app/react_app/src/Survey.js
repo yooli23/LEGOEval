@@ -2,7 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 import * as Surveys from "survey-react";
-import "survey-react/survey.css";
+import "survey-react/modern.css";
+import "./Survey.css";
 
 class Survey extends React.Component {
 
@@ -12,7 +13,7 @@ class Survey extends React.Component {
     }
 
     componentDidMount() {
-        const url = window.location.href.split('?')[0];
+        const url = window.location.href;
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
         })
@@ -20,7 +21,6 @@ class Survey extends React.Component {
 
     render() {
         if (this.state.pipeline == undefined) return <p>Loading...</p>;
-
         const data = this.state.pipeline[0].data;
         let json = {};
         if (data.hasOwnProperty("questions")) {
@@ -29,10 +29,11 @@ class Survey extends React.Component {
                 json.questions.push(this.parseQuestion(JSON.parse(data.questions[i])));
             }
         }
+        Surveys.StylesManager.applyTheme("modern");
         let model = new Surveys.Model(json);
-
+        model.onComplete.add(this.popComponent);
         return (
-          <Surveys.Survey model={model} onComplete={this.popComponent}/>
+          <Surveys.Survey model={model} onUpdateQuestionCssClasses={this.customizeTheme}/>
         );
     }
 
@@ -72,19 +73,44 @@ class Survey extends React.Component {
         return parsed;
     }
 
-    popComponent = (survey, options) => {
+    customizeTheme = (survey, options) => {
+        var classes = options.cssClasses;
 
-        const data = this.state.pipeline[0].data;
+            classes.mainRoot += " sv_qstn";
+            classes.root = "sq-root";
+            classes.title += " sq-title";
+            classes.item += " sq-item";
 
-        var surveyTitleStr = data.title;
-        var surveyData = JSON.stringify(survey.data);
+            if (options.question.isRequired) {
+                classes.title += " sq-title-required";
+            }
 
-        var updateVal = {};
-        updateVal['instruction'] = 'advance';
-        updateVal[surveyTitleStr] = surveyData
+            switch (options.question.getType()) {
+                case "radiogroup":
+                    classes.root += " sq-root-rg";
+                    break;
+                case "checkbox":
+                    classes.root += " sq-root-cb";
+                    break;
+                case "text":
+                    classes.root += " sq-root-text";
+                    break;
+                case "rating":
+                    classes.root += " sq-root-rating";
+                    break;
+                case "comment":
+                    classes.root += " sq-root-comment";
+                    break;
+                case "matrix":
+                    classes.root += " sq-root-matrix";
+                    break;
+                default:
+            }
+    }
 
-        const url = window.location.href.split('?')[0];
-        axios.post(url+ "/update", Object.assign({}, this.state, updateVal)).then(res => {
+    popComponent = () => {
+        const url = window.location.href;
+        axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'advance'})).then(res => {
             this.setState(res.data);
             this.props.advance();
         })
