@@ -1,15 +1,25 @@
-LoadMTurk Component
+# Load MTurk
 
-Properties:
-- None currently
+## Notes
 
-Instructions:
-- load_mturk
-    Requests the mturk dict to be like so:
-        state.data['mturk'] = {
-            'assignment_id':'DEFAULT RANDOM ASSIGNMENT ID, REPLACE ME!',
-            'sandbox_end_point': 'https://workersandbox.mturk.com/mturk/externalSubmit',
-            'production_end_point': 'https://mturk.com/mturk/externalSubmit'
-        }
-- advance
-    Requests to advance to the next component by calling `state.advance()`
+- Please place this as the first component at the start of your pipline.
+- Please only add this component when running `launch_hits.py`, otherwise, comment it out.
+
+## Code
+
+```python3
+# build.py
+# ...
+load = LoadMTurk()
+pipeline.append(load.component)
+```
+
+```python3
+# main_loop.py
+def update(state, instruction):
+
+    # ...
+
+    if instruction == 'advance':
+        state.advance()
+```

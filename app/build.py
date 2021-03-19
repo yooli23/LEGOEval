@@ -1,6 +1,5 @@
 from util.build_helper import Component, Compute
 from components.page.page import Page
-from components.random_example.random_example import RandomExample
 from components.load_mturk.load_mturk import LoadMTurk
 from components.submit_mturk.submit_mturk import SubmitMTurk
 from components.survey.survey import Survey, RadioGroup, CheckBox, Text, Rating, Matrix, Comment
@@ -16,8 +15,8 @@ pipeline = []
 
 
 # Load MTurk
-# load = LoadMTurk()
-# pipeline.append(load.component)
+load = LoadMTurk()
+pipeline.append(load.component)
 
 # Page
 start = Page()
@@ -28,9 +27,8 @@ pipeline.append(start.component)
 
 
 # Chat then post survey...
-#pipeline.append(Chatbot("Chat1").component)
-#pipeline.append(PostChatSurvey(title="A post chat survey", questions=[Text("overall", "How was the chatbot experience, overall?").toJson()]).component)
-
+pipeline.append(Chatbot("Chat1").component)
+pipeline.append(PostChatSurvey(title="A post chat survey", questions=[Text("overall", "How was the chatbot experience, overall?").toJson()]).component)
 
 
 # Compare chat survey
@@ -58,7 +56,6 @@ survey.questions.append(comment1.toJson())
 pipeline.append(survey.component)
 
 
-
 # Page
 end = Page()
 end.title = "Finished Task"
@@ -67,5 +64,5 @@ end.button = "Done"
 pipeline.append(end.component)
 
 # Submit MTurk
-# submit = SubmitMTurk()
-# pipeline.append(submit.component)
+submit = SubmitMTurk()
+pipeline.append(submit.component)

@@ -1,10 +1,13 @@
-Page Component
+# Page Component
 
-Properties:
-- title : str    
-- description : str
-- button : str
+## Code
 
-Instructions:
-- advance
-    Requests to advance to the next component by calling `state.advance()`
+```python3
+# build.py
+# ...
+start = Page()
+start.title = "Hello, world!"
+start.description = "These are my instructions."
+start.button = "Continue"
+pipeline.append(start.component)
+```
