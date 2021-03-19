@@ -1,16 +1,26 @@
-# Compare Chats
+# Compare Chats with a Survey
 
+## Notes
+
+- See the `survey` component for more details about how to construct a survey for your task.
 
 ## Code
 
 ```python3
 # build.py
 
-from components.compare.chats import CompareChats
+from components.compare.chats import CompareChatsSurvey
 
 # ...
 
-pipeline.append(CompareChats(identifier="UniqueIdentifierHere").component)
+survey = CompareChatsSurvey("RandomComparison", text="My instructions here for the survey!")
+
+survey.title = "Unique Survey Name here..."
+
+text1 = Text("name", "What is your name?")
+survey.questions.append(text1.toJson())
+
+pipeline.append(survey.component)
 ```
 
 ```python3
