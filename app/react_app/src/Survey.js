@@ -13,7 +13,7 @@ class Survey extends React.Component {
     }
 
     componentDidMount() {
-        const url = window.location.href;
+        const url = window.location.href.split('?')[0];
         axios.get(url+ "/init").then(res => {
             this.setState(res.data);
         })
@@ -31,9 +31,8 @@ class Survey extends React.Component {
         }
         Surveys.StylesManager.applyTheme("modern");
         let model = new Surveys.Model(json);
-        model.onComplete.add(this.popComponent);
         return (
-          <Surveys.Survey model={model} onUpdateQuestionCssClasses={this.customizeTheme}/>
+          <Surveys.Survey model={model} onUpdateQuestionCssClasses={this.customizeTheme} onComplete={this.popComponent}/>
         );
     }
 
@@ -108,9 +107,19 @@ class Survey extends React.Component {
             }
     }
 
-    popComponent = () => {
-        const url = window.location.href;
-        axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'advance'})).then(res => {
+    popComponent = (survey, options) => {
+        const url = window.location.href.split('?')[0];
+
+        const data = this.state.pipeline[0].data;
+
+        var surveyTitleStr = data.title;
+        var surveyData = JSON.stringify(survey.data);
+
+        var updateVal = {};
+        updateVal['instruction'] = 'advance';
+        updateVal[surveyTitleStr] = surveyData
+
+        axios.post(url+ "/update", Object.assign({}, this.state, updateVal)).then(res => {
             this.setState(res.data);
             this.props.advance();
         })
