@@ -2,6 +2,10 @@ from components.submit_mturk.submit_mturk import SubmitMTurk
 from dataloader import DataLoader
 
 
+data = [([{'id': idx, 'senderId':'bot_a', 'text': i} for idx, i in enumerate(a)], [{'id': idx, 'senderId':'bot_b', 'text': i} for idx, i in enumerate(b)]) for a, b in [[[z for z in y.split('\n') if z != ''] for y in x.split('XXX') if y.strip() != ''] for x in "".join(open('./convo_data_example.txt', 'r').readlines()).split("---") if x.strip() != '']]
+loader = DataLoader(key="compare_convos", count=3, data=data)
+
+
 def update(state, instruction):
 
     if instruction == 'advance':
@@ -16,10 +20,13 @@ def update(state, instruction):
             state.advance()
 
     if instruction == 'load_comparison':
-        state.data["compare_bot_a"] = [{'id':0, 'senderId':'bot_a', 'text': "Hello from backend!"}, {'id':1, 'senderId':'bot_b', 'text': "This is a random message"}, {'id':2, 'senderId':'bot_a', 'text': "Hello from backend!!!"}, {'id':3, 'senderId':'bot_b', 'text': "another random message"}, {'id':4, 'senderId':'bot_a', 'text': "Hello from backend!!!"}]
-        state.data["compare_bot_b"] = [{'id':0, 'senderId':'bot_a', 'text': "Hello from backend!"}, {'id':1, 'senderId':'bot_b', 'text': "This is a random message"}, {'id':2, 'senderId':'bot_a', 'text': "Hello from backend!!!"}, {'id':3, 'senderId':'bot_b', 'text': "another random message"}, {'id':4, 'senderId':'bot_a', 'text': "Hello from backend!!!"}]
+        convo_a, convo_b = loader.pop()
+        state.data["compare_bot_a"] = convo_a        
+        state.data["compare_bot_b"] = convo_b
 
     if instruction == 'mark_complete':
         SubmitMTurk.mark_task_complete(state)
     
     return state
+
+
