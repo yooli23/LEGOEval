@@ -34,10 +34,13 @@ pipeline.append(PostChatSurvey(title="A post chat survey", questions=[Text("over
 # Compare chat survey
 survey = CompareChatsSurvey("RandomComparison", text="Please complete the survey & then answer any questions!")
 survey.title = "Task Survey"
+
 text1 = Text("name", "What is your name?")
 survey.questions.append(text1.toJson())
+
 radioGroup1 = RadioGroup("major", "What is your major?", ["Computer Science", "Biology", "Philosophy", "Art History"])
 survey.questions.append(radioGroup1.toJson())
+
 checkBox1 = CheckBox("majors", "What are your majors?",
                      ["Computer Science", "Biology", "Philosophy", "Art History", "Music"], True)
 survey.questions.append(checkBox1.toJson())

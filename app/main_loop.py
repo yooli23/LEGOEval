@@ -2,8 +2,12 @@ from components.submit_mturk.submit_mturk import SubmitMTurk
 from dataloader import DataLoader
 
 
-data = [([{'id': idx, 'senderId':'bot_a', 'text': i} for idx, i in enumerate(a)], [{'id': idx, 'senderId':'bot_b', 'text': i} for idx, i in enumerate(b)]) for a, b in [[[z for z in y.split('\n') if z != ''] for y in x.split('XXX') if y.strip() != ''] for x in "".join(open('./convo_data_example.txt', 'r').readlines()).split("---") if x.strip() != '']]
-loader = DataLoader(key="compare_convos", count=3, data=data)
+# Transform our data from .txt -> list of dicts
+data = [([{'id': idx, 'senderId':('bot_a' if idx % 2 == 0 else 'bot_b'), 'text': i} for idx, i in enumerate(a)], [{'id': idx, 'senderId': ('bot_a' if idx % 2 == 0 else 'bot_b'), 'text': i} for idx, i in enumerate(b)]) for a, b in [[[z for z in y.split('\n') if z != ''] for y in x.split('XXX') if y.strip() != ''] for x in "".join(open('./convo_data_example.txt', 'r').readlines()).split("---") if x.strip() != '']]
+
+
+# Init our data loader
+loader = DataLoader(key="CompareConvosKeyX", count=1, data=data)
 
 
 def update(state, instruction):
@@ -20,7 +24,7 @@ def update(state, instruction):
             state.advance()
 
     if instruction == 'load_comparison':
-        convo_a, convo_b = loader.pop()
+        convo_a, convo_b = loader.pop()        
         state.data["compare_bot_a"] = convo_a        
         state.data["compare_bot_b"] = convo_b
 

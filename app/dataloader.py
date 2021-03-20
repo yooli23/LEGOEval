@@ -20,17 +20,17 @@ class DataLoader:
         """
         self.key = key
         self.count = count
-        self.data = data
-        self.create_data_if_non_exists()
+        self.data = data        
 
     def create_data_if_non_exists(self):
         """
         Adds objects to the database if non-exist.
         """
-        results = CustomJSON.query.filter_by(key=self.key).all()
-        if results != []: return
+        exists = CustomJSON.query.filter_by(key=self.key).first() is not None
+        if exists: return
         for i in self.data:
-            db.session.add(CustomJSON(key=self.key, count=self.count, json=json.dumps(i)))
+            obj = CustomJSON(key=self.key, count=self.count, json=json.dumps(i))
+            db.session.add(obj)
         db.session.commit()
 
     def pop(self):
@@ -40,6 +40,7 @@ class DataLoader:
         If no objects left, i.e, all have a count of zero,
         we return a random choice and collect extra data.
         """
+        self.create_data_if_non_exists()
         possible_results = CustomJSON.query.filter_by(key=self.key).filter(CustomJSON.count > 0).all()
         if not possible_results:
             possible_results = CustomJSON.query.filter_by(key=self.key).all()
