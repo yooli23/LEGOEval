@@ -65,9 +65,9 @@
 	max-width: 700px;
 	padding: 14px 18px;
   margin: 6px 8px;
-	background-color: #5b5377;
+	background-color: #3F51B5;
 	border-radius: 16px 16px 0 16px;
-	border: 1px solid #443f56;
+	border: 1px solid #3F51B5;
  
 }
 .otherBubble {
@@ -75,9 +75,9 @@
 	max-width: 700px;
 	padding: 14px 18px;
   margin: 6px 8px;
-	background-color: #6C8EA4;
+	background-color: #e6e6e6;
 	border-radius: 16px 16px 16px 0;
-	border: 1px solid #54788e;
+	border: 1px solid #e6e6e6;
   
 }
 .own {
@@ -85,6 +85,7 @@
 }
 .other {
 	align-self: flex-start;
+  color: #282c34;
 }
 span.own,
 span.other{

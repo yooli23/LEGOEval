@@ -28,7 +28,7 @@ class SubmitMTurk extends React.Component {
                 <input type="hidden" value={this.state.mturk.assignment_id} name="assignmentId" id={this.state.mturk.assignment_id}/>
                 <input type="hidden" value='foo' name="bar"/>
                 <input type="hidden" value={this.state.mturk.end_point} name = "end_point"/>
-                <Button type="submit">Click here to finish task</Button>
+                <Button type="submit" variant="contained" color="primary">Click here to finish task</Button>
             </form>
         );     
     }

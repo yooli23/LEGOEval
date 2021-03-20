@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import '../App.css';
 
 
@@ -45,11 +46,14 @@ class MyChatbot extends React.Component{
         if (this.state.pipeline === undefined) return <p>Loading...</p>;
         const data = this.state.pipeline[0].data;
         return (
-          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>
-            <p style = {{marginBottom: 20}}>Please send messages until the task will automatically end.</p>
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>            
+              <p style = {{marginBottom: 20}}>Chat Window</p>
               <MessageList messages={this.state.messages} />
-              <input type="text" placeholder="Type message here..." value={this.state.text} onChange={this.textChanged} style={{marginTop: 40}} />
-              <Button onClick={this.sendMessage}>Send</Button>               
+              <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', flexDirection: 'row'}}>
+                <TextField id="outlined-basic" placeholder="Type message here..." label="Type message here..." value={this.state.text} onChange={this.textChanged} style={{marginTop: 40}} />
+                <Button onClick={this.sendMessage} variant="contained" color="primary" style={{marginTop: 40, marginLeft: 15}}>Send</Button>               
+              </div>
+              <p style = {{marginTop: 40, color: '#b8b8b8'}}>Please send messages until the task will automatically end.</p>
             </div>
           );
     }

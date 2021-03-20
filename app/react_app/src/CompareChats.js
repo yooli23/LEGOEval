@@ -62,15 +62,15 @@ class CompareChats extends React.Component {
       const data = this.state.pipeline[0].data;
       return (
         <div>
-            <p style = {{marginBottom: 20}}>{data.text}</p>
+            <p style = {{marginBottom: 20, marginTop: 40}}>{data.text}</p>
         
-            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'row'}}>
-                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>            
+            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', minHeight: '40vh', flexDirection: 'row'}}>
+                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', minHeight: '40vh', flexDirection: 'column'}}>            
                     <MessageList messages={this.state.compare_bot_a} />
                     {this.props.showButtons ? <Button onClick={this.chooseConvoA} variant="contained" color="primary">Choose This Conversation</Button> : null}
                 </div>
 
-                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh', flexDirection: 'column'}}>            
+                <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', minHeight: '40vh', flexDirection: 'column'}}>            
                     <MessageList messages={this.state.compare_bot_b} />                    
                     {this.props.showButtons ? <Button onClick={this.chooseConvoB} variant="contained" color="primary">Choose This Conversation</Button> : null}
                 </div>
