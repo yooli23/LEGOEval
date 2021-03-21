@@ -3,10 +3,10 @@ from util.build_helper import Component
 
 class Page:
 
-    def __init__(self):
-        self.title = "I am a title."
-        self.description = "I am a description."
-        self.button = "Continue"
+    def __init__(self, title="I am a title.", description="I am a description.", button="Continue"):
+        self.title = title
+        self.description = description
+        self.button = button
 
     @property
     def component(self):
