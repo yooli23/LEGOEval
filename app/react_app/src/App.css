@@ -68,6 +68,7 @@
 	background-color: #3F51B5;
 	border-radius: 16px 16px 0 16px;
 	border: 1px solid #3F51B5;
+  text-align: left;
  
 }
 .otherBubble {
@@ -78,6 +79,7 @@
 	background-color: #e6e6e6;
 	border-radius: 16px 16px 16px 0;
 	border: 1px solid #e6e6e6;
+  text-align: left;
   
 }
 .own {

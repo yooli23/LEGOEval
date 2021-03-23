@@ -27,8 +27,9 @@ class MessageList extends React.Component {
                   return (
                     <div class="bubbleWrapper">
                       <div class={"bot_a" == message.senderId ? "inlineContainer own" : "inlineContainer"}>
-                        <div className={"bot_a" != message.senderId ?"otherBubble other" : "ownBubble own"}>{message.text}</div>
+                        <div className={"bot_a" != message.senderId ? "otherBubble other" : "ownBubble own"}>{message.text}</div>
                       </div>
+                      <span className={"bot_a" != message.senderId ? "other" : "own"}>{"bot_a" == message.senderId ? "Human" : "Speaker"}</span>
                     </div>
                   )
                 })

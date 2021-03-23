@@ -3,7 +3,7 @@ from load_meena_blender_pairs import load as load_pairs
 from dataloader import DataLoader
 
 
-loader = DataLoader(key="BlenderMeena8", count=1, data=load_pairs(count=50))
+loader = DataLoader(key="BlenderMeena", count=1, data=load_pairs(count=50))
 
 
 def update(state, instruction):  

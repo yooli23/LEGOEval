@@ -9,7 +9,7 @@ def load_meena():
         convo = []
         for line in f.readlines():
             if line != "\n":
-                convo.append(line.split(":")[-1])
+                convo.append(line.replace("Human: ", "").replace("Meena: ", ""))
             else:
                 data.append(convo[1:])
                 convo = []
@@ -21,14 +21,14 @@ def load_blender():
     with open('./blender.txt', 'r') as f:                
         for line in f.readlines():
             convo = []
-            for x in [(x[0]['text'].split(":")[-1], x[1]['text']) for x in json.loads(line)['dialog'][1:]]:        
+            for x in [(x[0]['text'], x[1]['text']) for x in json.loads(line)['dialog'][1:]]:        
                 convo.append(x[0])
                 convo.append(x[1])
             data.append(convo)
     return data
 
 
-def convert_data(data, max_turns=15):
+def convert_data(data, max_turns=100):
     final = []
     for convo in data:
         result = []

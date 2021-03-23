@@ -12,17 +12,25 @@ from components.post_chat_survey.post_chat_survey import PostChatSurvey
 pipeline, compute = [], {}
 
 
+TASK_TITLE = "Compare Two Conversations"
+
+TASK_INSTRUCTION = "In this task, you will compare two conversations, and answer a few brief questions about them."
+
+
 # MTurk Support
 pipeline.append(
-    LoadMTurk().component
+    LoadMTurk(
+        title=TASK_TITLE,
+        description=TASK_INSTRUCTION,
+    ).component
 )
 
 
 # Add a page
 pipeline.append(
     Page(
-        title="Compare Two Conversations",
-        description="In this task, you will compare two conversations, and answer a few brief questions about them.",
+        title=TASK_TITLE,
+        description=TASK_INSTRUCTION,
         button="Start Task"
     )
     .component
@@ -36,14 +44,14 @@ survey.questions.append(
     RadioGroup(
         "long_conversation", 
         "Who would you prefer to talk to for a long conversation?", 
-        ["LEFT Conversation", "RIGHT Conversation"]
+        ["LEFT Speaker", "RIGHT Speaker"]
     ).toJson()
 )
 survey.questions.append(
     RadioGroup(
         "human", 
         "Which speaker sounds more human?", 
-        ["LEFT Conversation", "RIGHT Conversation"]
+        ["LEFT Speaker", "RIGHT Speaker"]
     ).toJson()
 )
 survey.questions.append(Comment("feedback", "Please provide a brief justification for your choice (In a few words)").toJson())

@@ -19,8 +19,16 @@ class LoadMTurk extends React.Component {
         })
     }
 
-    render() {
-        return <Button onClick={this.requestMTurkInfo} variant="contained" color="primary">Start Task</Button>;
+    render() {        
+        if (this.state.pipeline == undefined) return <p>Loading...</p>;      
+        const data = this.state.pipeline[0].data;
+        return (
+          <div>            
+              <h1>{data.title}</h1>            
+              <p>{data.description}</p>
+              <Button onClick={this.requestMTurkInfo} variant="contained" color="primary">Start Task</Button>
+          </div>
+        );        
     }    
 
     requestMTurkInfo = () => {

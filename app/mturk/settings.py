@@ -41,9 +41,9 @@ mturk = {
     # If this is False, real money will be deducted
     'is_sandbox': True,
     # basic reward for each HIT
-    'reward': '0.02',
+    'reward': '0.50',
     # bonus will be paid if the worker finish the HIT
-    'bonus': '0.05',
+    'bonus': '0.00',
     # task title
     'title': task['task_name'],
     # Keywords of our hits
@@ -51,7 +51,7 @@ mturk = {
     # Description of the hit
     'description': task['task_short_description'],
     # number of hits
-    'num_hits': 10,
+    'num_hits': 3,
     # auto_approval_delay in seconds
     'auto_approval_delay': 60*60*24, # one day
     # max assignment 1- unique worker, 0 - unlimited hits per worker TODO: only works for unique worker now.
