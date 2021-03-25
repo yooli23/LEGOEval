@@ -9,3 +9,4 @@ db_by_josh==0.0.3
 Flask-SQLAlchemy==2.4.4
 SQLAlchemy==1.3.23
 psycopg2==2.8.6
+requests

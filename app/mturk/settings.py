@@ -21,15 +21,11 @@ server = {
 # Task options
 task = {
     'human_speaks_first': False,    
-    'task_name': 'Evaluation Task',  
-    'task_short_description': 'You will chat with a bot',
-    'task_key_words': "label text, binary, yes, no, context, bonus, grammer, english",       
+    'task_name': 'Chat with a Chatbot',  
+    'task_short_description': 'You will compare two conversations and answer three questions.',
+    'task_key_words': "survey, chatbot, english, talk",       
     'task_instructions': """
-                    For this task, you will be chatting with another user.
-
-                    Please complete the pre-task survey, then chat with the other user for approximately 5 minutes.
-
-                    Finally, you will complete a post-task survey.
+                    In this task, you will chat with a chatbot! You will also answer a two survey questions :)                        
                     """,    
     'move_instructions_to_top': True,
     'enable_agent_title': True,    
@@ -39,7 +35,7 @@ task = {
 
 mturk = {
     # If this is False, real money will be deducted
-    'is_sandbox': True,
+    'is_sandbox': False,
     # basic reward for each HIT
     'reward': '0.50',
     # bonus will be paid if the worker finish the HIT
@@ -51,7 +47,7 @@ mturk = {
     # Description of the hit
     'description': task['task_short_description'],
     # number of hits
-    'num_hits': 3,
+    'num_hits': 35,
     # auto_approval_delay in seconds
     'auto_approval_delay': 60*60*24, # one day
     # max assignment 1- unique worker, 0 - unlimited hits per worker TODO: only works for unique worker now.

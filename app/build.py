@@ -12,9 +12,8 @@ from components.post_chat_survey.post_chat_survey import PostChatSurvey
 pipeline, compute = [], {}
 
 
-TASK_TITLE = "Compare Two Conversations"
-
-TASK_INSTRUCTION = "In this task, you will compare two conversations, and answer a few brief questions about them."
+TASK_TITLE = "Chat with a Chatbot"
+TASK_INSTRUCTION = "In this task, you will chat with a chatbot! You will also answer a two survey questions :)"
 
 
 # MTurk Support
@@ -37,27 +36,41 @@ pipeline.append(
 )
 
 
-# Compare chats
-survey = CompareChatsSurvey("CompareChats", text="Please compare these two conversations below.")
-survey.title = "Compare Chats"
-survey.questions.append(
+pre_survey = Survey()
+pre_survey.title = "Pre Survey"
+pre_survey.questions = [
     RadioGroup(
-        "long_conversation", 
-        "Who would you prefer to talk to for a long conversation?", 
-        ["LEFT Speaker", "RIGHT Speaker"]
+        name="q1", 
+        title="Have you ever talked to an AI chatbot before?", 
+        choices=["Yes!", "Not sure...", "No"],
+        isRequired=True
     ).toJson()
-)
-survey.questions.append(
-    RadioGroup(
-        "human", 
-        "Which speaker sounds more human?", 
-        ["LEFT Speaker", "RIGHT Speaker"]
-    ).toJson()
-)
-survey.questions.append(Comment("feedback", "Please provide a brief justification for your choice (In a few words)").toJson())
-pipeline.append(survey.component)
+]
+pipeline.append(pre_survey.component)
 
 
+pipeline.append(
+    Chatbot("chat",
+        instruction="Please send messages until the task will end automatically. You will need to send approximately 14 messages.",
+        force_human_message="Hi"
+    ).component
+)
+
+
+post_survey = Survey()
+post_survey.title = "Post Survey"
+post_survey.questions = [
+    RadioGroup(
+        name="q2", 
+        title="Did the chatbot sound 'human'?", 
+        choices=["It sounded pretty close to a human!", "Not really..."],
+        isRequired=True
+    ).toJson()
+]
+pipeline.append(post_survey.component)
+
+
+# Submit MTurk
 pipeline.append(
     SubmitMTurk().component
 )

@@ -4,9 +4,9 @@ import json
 
 class Survey:
 
-    def __init__(self, title = "", questions = []):
+    def __init__(self, title = ""):
         self.title = title
-        self.questions = questions
+        self.questions = []
 
     @property
     def component(self):
@@ -18,7 +18,7 @@ Class for single-choice questions
 """
 class RadioGroup:
 
-    def __init__(self, name, title, choices=[], isRequired=False, colCount=1):
+    def __init__(self, name, title, choices=None, isRequired=False, colCount=1):
         self.type = "radiogroup"
         self.name = name
         self.title = title
