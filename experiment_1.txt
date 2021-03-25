@@ -1,0 +1,122 @@
+josharnold@Joshs-MacBook-Pro app % python3 view_data.py
+Loading...
+
+Reading database for josharnold-exp1-356b73b7070054
+142 vs. 116
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The left conversation was really choppy. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The speaker on the right talks about themselves as if they are an actual human with real life experiences.'}
+{'human': 'LEFT Speaker', 'long_conversation': 'LEFT Speaker', 'feedback': 'They interact more with the other person'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'It is more natural from the greetings to the overall response of the speaker. It make more sense and very comprehensive.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'They gave long meaningful responses.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'I like how the speaker includes details about themselves sounding real and keeps me interested for longer conversations. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "It seems to be a coherent conversation that's actually about something and makes sense. It continues and isn't just abrupt."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': "I hate small-talk, but I love listening to peoples' interests in film and music."}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The right speaker changes subject too abruptly so it appears unnatural'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'I think the right speaker sounds more fun and interesting. The responses are more detailed and this person sounds like somebody I could see myself having a conversation with. The left speaker provided short answers, so I would not want to talk with them'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "left speaker didn't respond to the human saying nonsense and carried on "}
+{'human': 'RIGHT Speaker', 'long_conversation': 'RIGHT Speaker', 'feedback': "Justify. With 'justify' question words, you need to explain the basis of your argument by presenting the evidence that informed your outlook. In such answers, you need to present your evidence in a convincing way, demonstrating good reasons for adopting your position."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Right speaker and human talking about art. I like art. And they are speaking more conversation'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "There isn't much of a difference but the conversation on the LEFT was more enjoyable for me."}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Left is better and sometime only limited to answers instead of asking many questions.'}
+{'human': 'RIGHT Speaker', 'long_conversation': 'RIGHT Speaker', 'feedback': 'Right speaker and human talking about pets. I like pets. And they are speaking more conversation.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'they are speaking more conversation'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker sounds more human. The left speaker sounds somewhat human, but also a bit robotic. Though left seems empathetic, the speaker also overuses things like "Aw", and does some clunky speaking. Right is a little clunky, too, but less so.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'the right speaker does not seem programmed since the flow of information and questions can show out clearly ,and you are not able to predict the next question like the left speaker.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'the person on the left did not know what to say and the person on the right had more emotion'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'It was good and neatly explained what is needed.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Right speaker changed topics unnaturally.finished and started conversations akwardly'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker said "cool" too much for it to sound natural.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Right conversation is more in depth and interesting although the speaker does say a few odd things'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'He was talking about video games and using references about the kids. Made it seem like he was human.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Right speaker sounds like an AI and is asking similar questions'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Well, the speaker in the conversation is engaged with the human. They ask reciprocated questions and express curiosity and can accurately respond to the human in a meaningful and contextual way. The topic of the conversation flows naturally and organically. The speaker on the left has some basic math issues and is not able to gather context or parse out the context of individual words or phrases. They are also very self-assured for being super wrong a lot. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The right speaker offers up more information quite forwardly and enthusiastically without prompt more than a natural conversation tends to and as such seems less human. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker is answering super insane sometime which is not every talked. Right is more understanding.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker is repetitive and boring.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'They have a lot more detail in their words'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker makes no sense with some of the questions asked, where right speaker flows with the conversation.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "I feel as they're a lot less imposing than the right speaker"}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'there were more discussion and share of knowledge from the right speaker'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "Right speaker sounds super fake with a ! every time. Also they're overbearing. Constantly changing subjects and just talks about a subject with one single line then moving on. The left speaker is more relax and appears more personal."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': 'I like how the left conversation opens more naturally and seems to have a more natural form of conversation, however, the Speaker in the right conversation is better at providing prompts to keep the conversation flowing.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Right speaker is more interesting with follow up questions to get to know more as well as related comments about himself regarding the conversation we are having.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Sentences are long and not like strange answers (like left speaker)'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Speaker is not repeating itself and more engaging discussion'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker is using same phrase again and usual human does not do that'}
+{'long_conversation': 'LEFT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker seems to communicate at a more human level than the left. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'More sensible sentences the other speaker started strange sentence at the end'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'More natural conversation with normal switching between topics'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "The right speaker appears to seem more interested in the conversation and asked clarification questions as a normal human would.  The computer did repeat itself, instead of saying /other/ hobbies, but we'll let that one slide.  The left speaker seemed too terse and uncaring."}
+{'feedback': 'VERY CLEARLY', 'human': 'RIGHT Speaker', 'long_conversation': 'RIGHT Speaker'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'It seems more friendly and less direct, the list of places to visit seems very computer generated in the first conversation'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Conversation flows more evenly and sticks to the subject at hand; both are pretty good though.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'very good understanding of discussion and talking continuously.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The conversation is richer.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "It's obvious in the right speaker conversation that the speaker is a bot because it can't follow along with the conversation and topics naturally. Left could is also likely a bot given how the conversation ended, but it wasn't immediately obvious."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker maintained the flow of conversation. Also the conversation was engaging. I was able to follow the conversation and never felt lost or confused.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The speaker on the right was more descriptive and shared more relevant information.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Was asking intuitive questions and all the right questions like an AI would.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker sounds more fun and engaging to talk to. This speaker gives longer and more thoughtful answers.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The left speaker is more natural and very consistent. It is more engaging and interactive'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'the right speaker did not contradict themselves with wrong facts and ansers'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The guy on the right is sort of exhausting. It feels like a first text date. The one on the left seems like a familiar friend. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Too much grief in left discussion. right is better and engaging'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker is responsive and expands on the questions being asked, giving more in depth answers.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Longer sentences and engaging unlike other char seems bot a lot'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'It is better human talk and not self-focused like other'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'No one is going to start a conversation by mentioning that they are going to divorce their wife. While LEFT speaker did sound repetitive (with all the cools, they did keep to the topic and seem engaged and natural.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "They're so much personable and talk a lot more"}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The left look like more come from life.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Theyre so much nicer and high energy'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'they go more into detail when they are speaking'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "I'd prefer the left speaker because of handling the greeting better and warmer. Also for changing the topic, the left speaker was more smooth,  friendly and natural."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker has a more engaging conversation.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'I like that the speaker is talking about art. It is a favourite topic of mine. They also sounded human because of the stories of their interaction with their children'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Talking in detail to him about bricklaying and his job, also about his kids.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "The right speaker's conversation is a lot more fluid. Whereas the left speaker's conversation is awkward at times."}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'There is a better flow to their conversation style.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'i just feel like it'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'They carry on the conversation more naturally. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'This speaker sounds more relaxed, more natural in his speech.'}
+{'human': 'RIGHT Speaker', 'long_conversation': 'RIGHT Speaker', 'feedback': 'The speaker on the right used fluent sentences that would would be used in daily conversations. The speaker on the left uses shorter, basic sentences that sound bot like.'}
+{'long_conversation': 'LEFT Speaker', 'feedback': 'The left speaker is very calm and composed despite a difficult conversation, but choose music as a new conversation despite that being the current one. ', 'human': 'RIGHT Speaker'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The speaker on the right seems to have more conversation topics related to real life, like traveling, work etc. And the speaker on the left at times seems to have a somewhat weak sense of logical reasoning.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'they listened and responded more appropriately'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The left speaker uses more humour and was consistent with their personality. The right speaker was inconsistent and more basic. And also asked repeated questions.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker was more engaging and the left speaker seemed like a bot because of the excessive smily faces. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker is not making sense at all. Though even right speaker is not very good but I would say better .'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The way sentences use the usual language words like Kinda,makes it very real'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Although the left speaker sounded natural, they used alright way too many times to sound human. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker seems stuck with :D in every sentence which is not making sense. Right is better writing better context.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'They were more informative.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Every sentence in details makes it more human'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'they were giving a lot of text for each speech bubble. it was not just a few short words. they gave complete sentences when they were talking.'}
+{'human': 'RIGHT Speaker', 'long_conversation': 'RIGHT Speaker', 'feedback': 'The speaker on the right was way more natural than the speaker on the left. The speaker on the left was too basic and generic.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': "I prefer the right speaker's conversation because it's more detailed and interesting. Although the left speak sounds more human with having smiley faces in the conversation"}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "Left just sounded very incoherent and confusing. It's not a conversation i would want to have. "}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The Left speaker ends each short statement with an emoji or you? The right speaker answers the question and gives details like a human would. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Very informal way of sentences makes it more human and intersting'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'You have every justification for feeling angry.'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'More animated, more interesting topic, longer sentences.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'the convo flows more logically'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "It's more natural and engaging "}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "The left speaker doesn't help the conversation to flow as well as the right speaker. The right speaker helps the conversation to flow by offering information and asking questions."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'Left speaker uses unnatural punctuation marks. right is clean'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': "the right speaker is more empathetic while left speaker is argumentative; not someone you'd want to waste your time talking to."}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'they are more relatable and keep the topics flowing better'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "There seems to be some empathy with the left speaker. Right speaker comes across as a 'Phone-Answering Robot'"}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'They added a lot more to the context of their replies.  They also seemed more empathetic'}
+{'long_conversation': 'RIGHT Speaker', 'feedback': 'The right speaker offers more enthusiasm and interesting topics of conversation. \n\nThe left speaker sounds more human as their vocabulary is more relaxed.', 'human': 'LEFT Speaker'}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The right speaker asks questions of human interest and indicates personal experiences and feelings. The left speaker is simply talking about technical matters regarding visas. '}
+{'long_conversation': 'RIGHT Speaker', 'human': 'LEFT Speaker', 'feedback': 'The right speaker asked more interesting questions  compared to the basic conversation on the left. However, the right speaker seems untrustworthy and inconsistent with their story.'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'I think the left speaker is more engaging on a singular topic while the right bounced around too much. '}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'seems more friendly'}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "It's more sensible and natural "}
+{'long_conversation': 'RIGHT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'I think the right speaker is less repetitive than the left one. '}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': "I felt the left side seemed more human with the smiley face and the answers seemed more genuine and real and nice. The right side started off too personal and didn't feel genuine. "}
+{'long_conversation': 'LEFT Speaker', 'human': 'LEFT Speaker', 'feedback': 'Using emotion words is very human way of sentences'}
+{'long_conversation': 'LEFT Speaker', 'human': 'RIGHT Speaker', 'feedback': 'The left one started to become incomprehensible but I liked that it offered something tangible to do.'}
+Counter({'RIGHT Speaker': 82, 'LEFT Speaker': 32})
+Counter({'RIGHT Speaker': 78, 'LEFT Speaker': 36})
+josharnold@Joshs-MacBook-Pro app % 
