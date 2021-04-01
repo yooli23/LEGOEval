@@ -35,7 +35,7 @@ task = {
 
 mturk = {
     # If this is False, real money will be deducted
-    'is_sandbox': False,
+    'is_sandbox': True,
     # basic reward for each HIT
     'reward': '0.50',
     # bonus will be paid if the worker finish the HIT
