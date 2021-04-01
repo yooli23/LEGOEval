@@ -50,7 +50,7 @@ class State:
         # If its a compute object, we need to "compute" the list and then try again
         if isinstance(first, Compute):
             extended_data = compute[first.name](self.data) # passes in dictionary, not State class
-            decoded_pipeline = extended_data + decoded_pipeline
+            decoded_pipeline = extended_data + decoded_pipeline[1:]
             final_pipeline = PipelineHelper.encode(decoded_pipeline)
             self.data['pipeline'] = final_pipeline
             self._calculate_component_if_needed()
