@@ -1,5 +1,5 @@
-# Framework Name TBA
-A Framework for Building Crowd Source Tasks.
+# LEGOEval
+A toolkit for dialogue system evaluation via crowdsourcing.
 
 
 ## Updating the front-end
