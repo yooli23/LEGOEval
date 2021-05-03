@@ -5,7 +5,6 @@ from settings import server as config
 from state import State
 from main_loop import update as update_fn
 
-
 @app.before_first_request
 def execute_this():
     db.create_all()
@@ -23,13 +22,13 @@ def task(task_id):
 
 @app.route('/<task_id>/init')
 def init(task_id):    
-    state = State(task_id)    
+    state = State(task_id, flag_server_debug = config['debug'])    
     return state.data
 
 
 @app.route('/<task_id>/update', methods=['POST'])
 def update(task_id):
-    state = State(task_id, data=request.json)        
+    state = State(task_id, data=request.json, flag_server_debug = config['debug'])        
     state = update_fn(state, state.data.get('instruction', ''))
     state.data.pop('instruction', None)
     state.save()    

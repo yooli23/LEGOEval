@@ -1,5 +1,5 @@
 import json
-from pprint import pprint
+import copy
 
 from util.build_helper import Component, Compute
 from components.page.page import Page as Instruction
@@ -13,28 +13,13 @@ from components.post_chat_survey.post_chat_survey import PostChatSurvey
 
 
 pipeline, compute = [], {}
+mturk_pipeline = []
 
-
-
-### ~~~ Your Task Below ~~~ ###
-
-
+### ~~~ Build Your Task Below ~~~ ###
 
 # Define a few constants
 TASK_TITLE = "Chat with a chatbot!"
 TASK_INSTRUCTION = "In this task, you will chat with a chatbot! Then you will answer a quick question!"
-
-
-
-# MTurk Support
-# pipeline.append(
-#     LoadMTurk(
-#         title=TASK_TITLE,
-#         description=TASK_INSTRUCTION,
-#     ).component
-# )
-
-
 
 # Instruction Page
 pipeline.append(
@@ -46,8 +31,6 @@ pipeline.append(
     .component
 )
 
-
-
 # Chatbot Page
 pipeline.append(
     Chatbot("chatbot",
@@ -56,17 +39,24 @@ pipeline.append(
     ).component
 )
 
-
-
 # Post Survey
 survey = Survey("post_survey")
 survey.title = "Post Survey"
 survey.questions.append(Comment("comment", "Please give feedback.").toJson())
 pipeline.append(survey.component)
 
+### ~~~ End of Your Task ~~~ ###
 
+# MTurk Support
+mturk_pipeline = copy.copy(pipeline)
+mturk_pipeline.insert(0,
+    LoadMTurk(
+        title=TASK_TITLE,
+        description=TASK_INSTRUCTION,
+    ).component
+)
 
 # Submit MTurk
-# pipeline.append(
-#     SubmitMTurk().component
-# )
+mturk_pipeline.append(
+    SubmitMTurk().component
+)

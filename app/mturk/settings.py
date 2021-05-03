@@ -8,16 +8,6 @@ database = {
     'database_path': "./database/data.db"
 }
 
-# Server options
-server = {
-    'server_secret_key': 'secret',   
-    'port': 1234,
-    'debug': False,
-    'logger': False,
-    'front_end_socketio_path': '/visualchatsocket',    
-    'server_socketio_path': '/visualchatsocket',
-}
-
 # Task options
 task = {
     'human_speaks_first': False,    
@@ -47,7 +37,7 @@ mturk = {
     # Description of the hit
     'description': task['task_short_description'],
     # number of hits
-    'num_hits': 35,
+    'num_hits': 10,
     # auto_approval_delay in seconds
     'auto_approval_delay': 60*60*24, # one day
     # max assignment 1- unique worker, 0 - unlimited hits per worker TODO: only works for unique worker now.
@@ -91,3 +81,13 @@ worker_requirements = [
         'IntegerValues':[98]
     },
 ]
+
+# Server options (abandoned)
+server = {
+    'server_secret_key': 'secret',   
+    'port': 1234,
+    'debug': False,
+    'logger': False,
+    'front_end_socketio_path': '/visualchatsocket',    
+    'server_socketio_path': '/visualchatsocket',
+}

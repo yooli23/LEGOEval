@@ -2,14 +2,15 @@ import json
 import time
 
 from app import db, Task
-from build import pipeline
+from build import pipeline, mturk_pipeline
 from util.build_helper import PipelineHelper, Component, Compute
 from build import compute
 
 
 class State:
     
-    def __init__(self, task_id, data=None):
+    def __init__(self, task_id, data=None, flag_server_debug=False):
+        self.flag_server_debug = flag_server_debug
         self.task_id = task_id
         self._load_from_db()
         self._calculate_component_if_needed()
@@ -19,11 +20,17 @@ class State:
     def _load_from_db(self):        
         """Loads the state data from the database."""        
         result = Task.query.filter_by(task_id=self.task_id).first()
-        if not result:     
-            task = Task(
-                task_id=self.task_id,
-                state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)})
-            )
+        if not result:
+            if self.flag_server_debug:
+                task = Task(
+                    task_id=self.task_id,
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)})
+                )
+            else:
+                task = Task(
+                    task_id=self.task_id,
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(mturk_pipeline)})
+                )
             db.session.add(task)
             db.session.commit()
             self._load_from_db()
