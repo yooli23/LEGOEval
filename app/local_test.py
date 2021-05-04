@@ -45,9 +45,9 @@ if __name__ == '__main__':
     )
     os.chdir(react_app_dir)
     # Delete existing generated node modules files
-    if os.path.exists(os.path.join(react_app_dir, 'node_modules'):
+    if os.path.exists(os.path.join(react_app_dir, 'node_modules')):
         sh.rm(shlex.split('-rf ' + 'node_modules'))
-    if os.path.exists(os.path.join(react_app_dir, 'build'):
+    if os.path.exists(os.path.join(react_app_dir, 'build')):
         sh.rm(shlex.split('-rf ' + 'build'))
     packages_installed = subprocess.call(['npm', 'install', react_app_dir])
     if packages_installed != 0:
