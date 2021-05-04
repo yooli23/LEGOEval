@@ -87,11 +87,9 @@ def setup_heroku_server(
 
     # Delete existing generated node modules files
     if os.path.exists(os.path.join(server_source_directory_path, 'react_app', 'node_modules')):
-        os.chdir(os.path.join(server_source_directory_path, 'react_app'))
-        sh.rm(shlex.split('-rf ' + 'node_modules'))
+        sh.rm(shlex.split('-rf ' + os.path.join(server_source_directory_path, 'react_app', 'node_modules')))
     if os.path.exists(os.path.join(server_source_directory_path, 'react_app', 'build')):
-        os.chdir(os.path.join(server_source_directory_path, 'react_app'))
-        sh.rm(shlex.split('-rf ' + 'build'))
+        sh.rm(shlex.split('-rf ' + os.path.join(server_source_directory_path, 'react_app', 'build')))
 
     # Copy over a clean copy into the server directory
     shutil.copytree(server_source_directory_path, heroku_server_development_path)
