@@ -40,7 +40,7 @@ git clone https://github.com/yooli23/LEGOEval.git
 ```
 
 ## Documentation
-Check out our docs for the following steps [here](https://legodocs.herokuapp.com/).
+Check out our docs for the following steps, [here](https://legodocs.herokuapp.com/).
 
 ## Citing
 If you use LEGOEval in your research, please cite [LEGOEval: An Open-Source Toolkit for Dialogue System Evaluation via Crowdsourcing](https://arxiv.org/pdf/2105.01992.pdf).
