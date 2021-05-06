@@ -1,5 +1,5 @@
 # LEGOEval
-A toolkit for dialogue system evaluation via crowdsourcing.
+LEGOEval is a toolkit for dialogue system evaluation via crowdsourcing, see our [demo video](https://www.youtube.com/watch?v=Dg6mafRGOpg&ab_channel=JoshArnold).
 
 ## Install LEGOEval
 LegoEval supports **Python 3.6+**. Windows is not supported currently.
@@ -40,4 +40,4 @@ git clone https://github.com/yooli23/LEGOEval.git
 ```
 
 #### Documentation
-Check out our docs for the following steps at [here](https://legodocs.herokuapp.com/).
+Check out our docs for the following steps [here](https://legodocs.herokuapp.com/).
