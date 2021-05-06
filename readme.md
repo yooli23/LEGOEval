@@ -26,7 +26,7 @@ Once you have installed [Docker](https://docs.docker.com/get-docker/), you can r
 
 1. Build
 ```bash
-sudo docker build -t legoeval:1 .
+sudo docker build https://github.com/yooli23/LEGOEval.git -t legoeval:1
 ```
 
 2. Run docker
