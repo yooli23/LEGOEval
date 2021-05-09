@@ -1,4 +1,4 @@
-![](https://github.com/yooli23/LEGOEval/blob/master/banner.png)
+![](assets/banner.png)
 # LEGOEval
 LEGOEval is a toolkit for dialogue system evaluation via crowdsourcing, see our [demo video](https://www.youtube.com/watch?v=Dg6mafRGOpg&ab_channel=JoshArnold).
 
