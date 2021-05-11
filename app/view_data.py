@@ -12,11 +12,8 @@ if __name__ == '__main__':
     print(f"Loading {task_name}\n")    
     
     data = load_data(task_name)
-    
-    for data_point in data:
-        try:
-            if data_point['complete']:
-                print(data_point)
-            print('\n---\n')
-        except:
-            pass        
+        
+    for data_point in data:      
+        if data_point['complete']:
+            pass
+      

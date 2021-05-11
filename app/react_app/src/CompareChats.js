@@ -49,8 +49,10 @@ class CompareChats extends React.Component {
 
     componentDidMount() {
         const url = window.location.href.split('?')[0]; 
+        // get the state
         axios.get(url+ "/init").then(res => {
             this.setState(res.data, function() {
+                // send an instruction to the backend, specifically, "load_comparison"
                 axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'load_comparison'})).then(result => {            
                     this.setState(result.data);     
                 });

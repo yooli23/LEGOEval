@@ -10,6 +10,7 @@ from components.chatbot.chatbot import Chatbot
 from components.compare.chats import CompareChats
 from components.compare.chats_survey import CompareChatsSurvey
 from components.post_chat_survey.post_chat_survey import PostChatSurvey
+from components.conversation_survey.conversation_survey import ConversationSurvey
 
 
 pipeline, compute = [], {}
@@ -32,18 +33,20 @@ pipeline.append(
 )
 
 # Chatbot Page
-pipeline.append(
-    Chatbot("chatbot",
-        instruction="Please chat with the first chatbot.",
-        force_human_message="Hi, first chatbot!"
-    ).component
-)
+# pipeline.append(
+#     Chatbot("chatbot",
+#         instruction="Please chat with the first chatbot.",
+#         force_human_message="Hi, first chatbot!"
+#     ).component
+# )
 
-# Post Survey
-survey = Survey("post_survey")
-survey.title = "Post Survey"
-survey.questions.append(Comment("comment", "Please give feedback.").toJson())
+# Conversation Survey
+survey = ConversationSurvey(
+    title="Conversation Survey", 
+    questions=[Comment("comment", "Please give feedback.").toJson()]
+)
 pipeline.append(survey.component)
+
 
 ### ~~~ End of Your Task ~~~ ###
 
