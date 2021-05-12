@@ -20,9 +20,13 @@ f.close()
 TASK_TITLE = "Chat with a chatbot!"
 TASK_INSTRUCTION = "In this task, you will chat with a chatbot! Then you will answer a quick question!"
 
+def GetCompute():
+    compute = {}
+    return compute
 
 def GetPipeline():
-    pipeline, compute = [], {}
+    pipeline = []
+    compute = GetCompute() 
     ### ~~~ Build Your Task Below ~~~ ###
     # Instruction Page
     pipeline.append(
