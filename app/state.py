@@ -2,7 +2,7 @@ import json
 import time
 
 from app import db, Task
-from build import pipeline, mturk_pipeline
+from build import GetPipeline, GetMturkPipeline
 from util.build_helper import PipelineHelper, Component, Compute
 from build import compute
 
@@ -24,12 +24,12 @@ class State:
             if self.flag_server_debug:
                 task = Task(
                     task_id=self.task_id,
-                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)})
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(GetPipeline())})
                 )
             else:
                 task = Task(
                     task_id=self.task_id,
-                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(mturk_pipeline)})
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(GetMturkPipeline())})
                 )
             db.session.add(task)
             db.session.commit()

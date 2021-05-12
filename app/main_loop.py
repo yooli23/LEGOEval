@@ -2,11 +2,13 @@ from components.submit_mturk.submit_mturk import SubmitMTurk
 
 # Import dataloader
 from dataloader import DataLoader
+import json
 
 # Load data form folder
 # [ONE_CONVO, TWO_CONVO, THREE_CONVO] from a text file
 ONE_CONVO = [{'id':0, 'senderId':'Robot', 'text': 'Hello from backend!'}, {'id':1, 'senderId':'You', 'text': 'Hello from backend!'}, {'id':2, 'senderId':'Robot', 'text': 'Hello from backend!'}, {'id':3, 'senderId':'You', 'text': 'Hello from backend!'}]
 your_formatted_convo_from_file = [('key1', ONE_CONVO), ('key2', ONE_CONVO)]
+
 
 # Create dataloader
 dataloader = DataLoader(key="uniqueKeyHere", count=3, data=your_formatted_convo_from_file)
