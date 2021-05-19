@@ -23,7 +23,7 @@ class Page extends React.Component {
       return (
         <div>            
             <h1>{data.title}</h1>            
-            <p>{data.description}</p>
+            <p style={{fontSize:40}}>{data.description}</p>
             <Button onClick={this.popComponent} variant="contained" color="primary">{data.button_name}</Button>            
         </div>
       );

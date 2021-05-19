@@ -19,14 +19,14 @@ def update(state, instruction):
     if instruction == 'advance':
         state.advance() 
 
-    if instruction == 'load_single_conversation':
-        # Put 'You' for senderId, else, put anything :)
+    # if instruction == 'load_single_conversation':
+    #     # Put 'You' for senderId, else, put anything :)
 
-        # Here is asking for one conversation        
-        key, convo = dataloader.pop()
-        state.data["convo_key"] = key
-        state.data["messages"] = convo
-        state.data["paragraph"] = "Hello, I am a paragraph!!!!"
+    #     # Here is asking for one conversation        
+    #     key, convo = dataloader.pop()
+    #     state.data["convo_key"] = key
+    #     state.data["messages"] = convo
+    #     state.data["paragraph"] = "Hello, I am a paragraph!!!!"
 
     if instruction == 'request_message':
         # Terminate task...

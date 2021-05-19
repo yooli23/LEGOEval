@@ -44,21 +44,23 @@ class ConversationSurvey extends React.Component {
 
               // Send instruction
               // Ask backend for the conversation
-                axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'load_single_conversation'})).then(result => {            
-                  this.setState(result.data);     
-              });
+              //   axios.post(url+ "/update", Object.assign({}, this.state, {instruction: 'load_single_conversation'})).then(result => {            
+              //     this.setState(result.data);     
+              // });
             });
         })
     }
 
-    render() {      
+    render() {
+      if (this.state.pipeline == undefined) return <p>Loading...</p>;      
+      const data = this.state.pipeline[0].data;      
       return (
         <div>
 
-          <p style={{fontSize: 30, fontWeight: 'bold'}}>{this.state.paragraph}</p>
+          <p style={{fontSize: 30, fontWeight: 'bold'}}>{data.paragraph}</p>
            
           <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh', flexDirection: 'column'}}>
-            <MessageList messages={this.state.messages} />
+            <MessageList messages={data.messages} />
           </div>
             <Survey advance={this.props.advance} />
         </div>
