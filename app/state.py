@@ -16,7 +16,7 @@ class State:
         if data:
             self.data = data
 
-    def _load_from_db(self):        
+    def _load_from_db(self):    
         """Loads the state data from the database."""        
         result = Task.query.filter_by(task_id=self.task_id).first()
         if not result:

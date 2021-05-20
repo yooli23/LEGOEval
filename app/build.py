@@ -21,7 +21,6 @@ f.close()
 # Define a few constants
 TASK_TITLE = "Rate 15 statements taken from a conversation."
 TASK_INSTRUCTION = "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about each part of a conversation."
-
 def GetCompute():
     compute = {}
     return compute
@@ -31,39 +30,34 @@ def GetPipeline():
     pipeline = []
     compute = GetCompute() 
     ### ~~~ Build Your Task Below ~~~ ###
+    first_page_text = survey_data["first_page_text"]
+    pages_info = survey_data["pages"]
     # Instruction Page
     pipeline.append(
         Instruction(
             title=TASK_TITLE,
-            description=TASK_INSTRUCTION,
+            description=first_page_text,
             button="Start Task"
         )
         .component
     )
-    # pipeline.append(
-    #     Instruction(
-    #         title="TESTING",
-    #         description=survey_data["pages"][0]["turn_metad"]["turn"]["turn_a"],
-    #         button="Start Task"
-    #     )
-    #     .component
-    # )
-    # Chatbot Page
-    # pipeline.append(
-    #     Chatbot("chatbot",
-    #         instruction="Please chat with the first chatbot.",
-    #         force_human_message="Hi, first chatbot!"
-    #     ).component
-    # )
-
-    # Conversation Survey
-    survey = ConversationSurvey(
-        title="Conversation Survey", 
-        questions=[Comment("comment", "Please give feedback.").toJson()],
-        paragraph="Testing",
-        messages=[{'id':0, 'senderId':'Robot', 'text': 'Hello from backend!'}, {'id':1, 'senderId':'You', 'text': 'Hello from backend!'}, {'id':2, 'senderId':'Robot', 'text': 'Hello from backend!'}, {'id':3, 'senderId':'You', 'text': 'Hello from backend!'}]
-    )
-    pipeline.append(survey.component)
+    for page_elem in pages_info:
+        reminder_text = page_elem["reminder_text"]
+        turn_metad = page_elem["turn_metad"]
+        questions_text = page_elem["questions"]
+        print(reminder_text)
+        print(turn_metad)
+        print(questions_text)
+        # Conversation Survey
+        questions = ConvertQuestions(questions_text)
+        messages = ConvertMessages(turn_metad)
+        survey = ConversationSurvey(
+            title="Conversation Survey", 
+            questions=questions,
+            paragraph=reminder_text,
+            messages=messages
+        )
+        pipeline.append(survey.component)
 
     ### ~~~ End of Your Task ~~~ ###
     return pipeline
@@ -84,3 +78,16 @@ def GetMturkPipeline():
         SubmitMTurk().component
     )
     return mturk_pipeline
+
+def ConvertMessages(turn_metad):
+    converted_messages = [{'id':0, 'senderId':'Robot', 'text': turn_metad["turn"]["turn_a"]}, {'id':1, 'senderId':'You', 'text': turn_metad["turn"]["turn_a"]}]
+    return converted_messages
+
+def ConvertQuestions(questions):
+    list_questions = []
+    for question_elem in questions:
+        if question_elem["question_type"] == "likert-5":
+            list_questions.append(Rating(str(question_elem["question_id"]), question_elem["question_text"]).toJson())
+        else:
+            print("ERROR in build.py")
+    return list_questions
