@@ -37,7 +37,7 @@ mturk = {
     # Description of the hit
     'description': task['task_short_description'],
     # number of hits
-    'num_hits': 10,
+    'num_hits': 20,
     # auto_approval_delay in seconds
     'auto_approval_delay': 60*60*24, # one day
     # max assignment 1- unique worker, 0 - unlimited hits per worker TODO: only works for unique worker now.
