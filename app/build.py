@@ -46,7 +46,7 @@ def GetPipeline():
         turn_metad = page_elem["turn_metad"]
         questions_text = page_elem["questions"]
         print(reminder_text)
-        print(turn_metad)
+        print(turn_metad["turn"]["turn_a"])
         print(questions_text)
         # Conversation Survey
         questions = ConvertQuestions(questions_text)
@@ -80,7 +80,7 @@ def GetMturkPipeline():
     return mturk_pipeline
 
 def ConvertMessages(turn_metad):
-    converted_messages = [{'id':0, 'senderId':'Robot', 'text': turn_metad["turn"]["turn_a"]}, {'id':1, 'senderId':'You', 'text': turn_metad["turn"]["turn_a"]}]
+    converted_messages = [{'id':0, 'senderId':'Robot', 'text': turn_metad["turn"]["turn_a"]}, {'id':1, 'senderId':'You', 'text': turn_metad["turn"]["turn_b"]}]
     return converted_messages
 
 def ConvertQuestions(questions):
