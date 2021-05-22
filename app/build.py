@@ -45,9 +45,6 @@ def GetPipeline():
         reminder_text = page_elem["reminder_text"]
         turn_metad = page_elem["turn_metad"]
         questions_text = page_elem["questions"]
-        print(reminder_text)
-        print(turn_metad["turn"]["turn_a"])
-        print(questions_text)
         # Conversation Survey
         questions = ConvertQuestions(questions_text)
         messages = ConvertMessages(turn_metad)
@@ -58,7 +55,27 @@ def GetPipeline():
             messages=messages
         )
         pipeline.append(survey.component)
+    # messages = [{'id':0, 'senderId':'Robot', 'text': "text_a"}, {'id':1, 'senderId':'You', 'text': "text_b"}]
+    # questions = [Rating("abc", "question_a").toJson()]
+    # reminder_text = "abc"
+    # survey = ConversationSurvey(
+    #         title="Conversation Survey", 
+    #         questions=questions,
+    #         paragraph=reminder_text,
+    #         messages=messages
+    #     )
+    # pipeline.append(survey.component)
 
+    # messages = [{'id':0, 'senderId':'Robot', 'text': "text_aaaaaaaaaaaaaaaaa"}, {'id':1, 'senderId':'You', 'text': "text_bbbbbbbbbbbbbbbbbbbbb"}]
+    # questions = [Rating("abcccccccccccccccccccccccccccccccccccc", "question_aaaaaaaaaaaaaaaaaaaaaaaaaa").toJson()]
+    # reminder_text = "abcccccccccccccccccccccccccccccccc"
+    # survey = ConversationSurvey(
+    #         title="Conversation Survey", 
+    #         questions=questions,
+    #         paragraph=reminder_text,
+    #         messages=messages
+    #     )
+    # pipeline.append(survey.component)
     ### ~~~ End of Your Task ~~~ ###
     return pipeline
 

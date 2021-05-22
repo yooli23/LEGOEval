@@ -28,7 +28,8 @@ class ConversationSurvey extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {messages: [], text: ""};      
+      this.state = {messages: [], text: ""};
+      this._callBackFun = this._callBackFun.bind(this);  
     }
 
     componentDidMount() {
@@ -50,6 +51,11 @@ class ConversationSurvey extends React.Component {
             });
         })
     }
+    
+    _callBackFun(res_data) {
+        this.setState(res_data.data, function() {
+        });
+    }
 
     render() {
       if (this.state.pipeline == undefined) return <p>Loading...</p>;      
@@ -57,12 +63,12 @@ class ConversationSurvey extends React.Component {
       return (
         <div>
 
-          <p style={{fontSize: 30, fontWeight: 'bold'}}>{data.paragraph}</p>
+          <p style={{fontSize: 30, fontWeight: 'bold', textAlign: 'left'}}>{data.paragraph}</p>
            
           <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh', flexDirection: 'column'}}>
             <MessageList messages={data.messages} />
           </div>
-            <Survey advance={this.props.advance} />
+            <Survey advance={this.props.advance} _callBackFun={this._callBackFun}/>
         </div>
       );
     }  
