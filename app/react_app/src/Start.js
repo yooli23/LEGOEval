@@ -11,6 +11,7 @@ import MyChatbot from "./chatbot/Chatbot";
 import CompareChats from "./CompareChats";
 import CompareChatsSurvey from "./CompareChatsSurvey";
 import PostChatSurvey from "./PostChatSurvey";
+import ConversationSurvey from "./ConversationSurvey";
 // Import your new components here!
 
 
@@ -74,7 +75,8 @@ class Start extends React.Component {
 
               case 'PostChatSurvey':
                 return <PostChatSurvey advance={this.getLatestState} />;
-
+              case 'ConversationSurvey':
+                return <ConversationSurvey advance={this.getLatestState} />;
               // Add more components here :)
 
               default:

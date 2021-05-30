@@ -117,12 +117,16 @@ class Survey extends React.Component {
 
         var updateVal = {};
         updateVal['instruction'] = 'advance';
-        updateVal[surveyTitleStr] = surveyData
+        updateVal[surveyTitleStr] = surveyData;
 
         axios.post(url+ "/update", Object.assign({}, this.state, updateVal)).then(res => {
+            if(this.props._callBackFun){
+                this.props._callBackFun(res);
+            }
             this.setState(res.data);
             this.props.advance();
         })
+        window.scrollTo(0,0)
     }
 
 }
