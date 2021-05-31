@@ -24,12 +24,7 @@ server_process = None
 
 heroku_url = 'https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli'
 
-def setup_heroku_server(
-    task_name,
-    tmp_dir=parent_dir,
-):
-
-    print("Heroku: Collecting files... for ", tmp_dir)
+def install_heroku_cli(tmp_dir=parent_dir):
     # Install Heroku CLI
     os_name = None
     bit_architecture = None
@@ -74,6 +69,17 @@ def setup_heroku_server(
     heroku_directory_name = glob.glob(os.path.join(tmp_dir, 'heroku-cli-*'))[0]
     heroku_directory_path = os.path.join(tmp_dir, heroku_directory_name)
     heroku_executable_path = os.path.join(heroku_directory_path, 'bin', 'heroku')
+    return heroku_executable_path
+
+
+def setup_heroku_server(
+    task_name,
+    tmp_dir=parent_dir,
+):
+
+    print("Heroku: Collecting files... for ", tmp_dir)
+
+    heroku_executable_path = install_heroku_cli(tmp_dir)
 
     server_source_directory_path = os.path.join(
         parent_dir, 'app'

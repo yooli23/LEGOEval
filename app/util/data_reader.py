@@ -1,3 +1,4 @@
+from util.server_util import install_heroku_cli
 import subprocess
 import json
 
@@ -12,7 +13,8 @@ def get_database_url(task_name):
                 raise RuntimeError("Uh oh. This task name does not exist!")
             app_name = loaded_dict[task_name]
             print(f"Reading database for {app_name}")
-        result = subprocess.check_output(['heroku', 'config:get', 'DATABASE_URL',  '-a',  f'{app_name}'])
+        heroku_executable_path = install_heroku_cli()
+        result = subprocess.check_output([f'{heroku_executable_path}', 'config:get', 'DATABASE_URL',  '-a',  f'{app_name}'])
         return result.decode('ascii').strip()
     except:
         raise RuntimeError('"appname.json" in ../app does not exist! Please run the task first via launch_hits.py!')

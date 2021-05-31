@@ -2,9 +2,8 @@ import json
 import time
 
 from app import db, Task
-from build import pipeline, mturk_pipeline
+from build import GetPipeline, GetMturkPipeline, GetCompute
 from util.build_helper import PipelineHelper, Component, Compute
-from build import compute
 
 
 class State:
@@ -24,12 +23,12 @@ class State:
             if self.flag_server_debug:
                 task = Task(
                     task_id=self.task_id,
-                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(pipeline)})
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(GetPipeline())})
                 )
             else:
                 task = Task(
                     task_id=self.task_id,
-                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(mturk_pipeline)})
+                    state=json.dumps({'task_id':self.task_id, 'pipeline':PipelineHelper.encode(GetMturkPipeline())})
                 )
             db.session.add(task)
             db.session.commit()
@@ -56,6 +55,7 @@ class State:
 
         # If its a compute object, we need to "compute" the list and then try again
         if isinstance(first, Compute):
+            compute = GetCompute()
             extended_data = compute[first.name](self.data) # passes in dictionary, not State class
             decoded_pipeline = extended_data + decoded_pipeline[1:]
             final_pipeline = PipelineHelper.encode(decoded_pipeline)
