@@ -1,0 +1,3278 @@
+[
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 354144934905267470,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 1880555046911902387,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 5693429680501595658,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 8796911822615505329,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 18160223732123757403,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6532420271898363789,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 15347476976561296468,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16239202514946009229,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "That sounds tough what do you do for fun",
+                        "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "7304-10192934404506750752",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 1029131479226744545,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 14655773690136384529,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12750105845097730889,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 13613446179221230757,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 16643213157790600372,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6349336951423383028,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17597499304927712790,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 738452022547704938,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12424056474921310093,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11877459782383474834,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12859328107257366218,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4081600752441357433,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "humanoid",
+        "example_set_id": 2588658905778715721,
+        "id_hash": 15654476103759776854
+    },
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17116505520950291777,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16912635054492790564,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 5190463581042320534,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 13662052244836284051,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 13282195443412333816,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 6773656394572277729,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 3297493509785997142,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17119820225689876994,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12859328107257366218,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4081600752441357433,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12424056474921310093,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11877459782383474834,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12750105845097730889,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 13613446179221230757,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 1029131479226744545,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 14655773690136384529,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17597499304927712790,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 738452022547704938,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 16643213157790600372,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6349336951423383028,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "humanoid",
+        "example_set_id": 5236763500999469267,
+        "id_hash": 1099406505371429703
+    },
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11629695642086467205,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 5194066793790426338,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 18436113526083354759,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10396513693665265590,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 16643213157790600372,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6349336951423383028,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17597499304927712790,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 738452022547704938,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 3297493509785997142,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17119820225689876994,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 13282195443412333816,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 6773656394572277729,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 18160223732123757403,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6532420271898363789,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 15347476976561296468,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16239202514946009229,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "That sounds tough what do you do for fun",
+                        "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "7304-10192934404506750752",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12424056474921310093,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11877459782383474834,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12859328107257366218,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4081600752441357433,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "humanoid",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "humanoid",
+        "example_set_id": 3802514850851872659,
+        "id_hash": 8330307739252645761
+    },
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 9925095391461693039,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 3364006868955100038,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4652972231647006509,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 1457914390021936435,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11335855724759107740,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11013663635546703650,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16467560662957511443,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 11092353243439925198,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "That sounds tough what do you do for fun",
+                        "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "7304-10192934404506750752",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6715618293845856544,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12319744032712137595,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9804970474038938946,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4659055021548439317,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 8045597061078091786,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 5188958147973111563,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10621429660394948379,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9123789176342786383,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11296029839528905818,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17918404240631847214,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10775436575134305592,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17526304678924826459,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "chatbot",
+        "example_set_id": 2588658905778715721,
+        "id_hash": 3107229835210464384
+    },
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 9976430664548060484,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 9178294111875347396,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9574140680991964919,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 15389001994747828321,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 5188958147973111563,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 8045597061078091786,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9123789176342786383,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10621429660394948379,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 4490380958227250427,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17823129708526363078,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12132900864775149344,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16093250309163964042,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11013663635546703650,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11335855724759107740,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 11092353243439925198,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16467560662957511443,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "That sounds tough what do you do for fun",
+                                "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "7304-10192934404506750752",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "That sounds tough what do you do for fun",
+                        "turn_b": "I enjoy my job teaching at a private elementary school, you?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "7304-10192934404506750752",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17918404240631847214,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11296029839528905818,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17526304678924826459,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10775436575134305592,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "chatbot",
+        "example_set_id": 3802514850851872659,
+        "id_hash": 14097043016165669226
+    },
+    {
+        "first_page_text": "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing.",
+        "pages": [
+            {
+                "page_type": "demographics",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "Age",
+                        "question_type": "radio",
+                        "question_id": 9438702690822455817,
+                        "options": [
+                            "29 or younger",
+                            "30-49",
+                            "50 or older",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "Gender",
+                        "question_type": "radio",
+                        "question_id": 1640457057705936196,
+                        "options": [
+                            "Male",
+                            "Female",
+                            "Not Listed",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "Highest Education Level Completed",
+                        "question_type": "radio",
+                        "question_id": 14992903291918516571,
+                        "options": [
+                            "None",
+                            "Highschool or GED",
+                            "College",
+                            "Graduate or Professional Degree",
+                            "Prefer not to say"
+                        ]
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "How often do you use voice assistants (such as Apple Siri, Amazon Alexa, or Google Assistant",
+                        "question_type": "radio",
+                        "question_id": 17331921744963215292,
+                        "options": [
+                            "Never",
+                            "Used one a few times",
+                            "Once a month",
+                            "Once a week",
+                            "Once a day",
+                            "Prefer not to say"
+                        ]
+                    }
+                ],
+                "top_text": "Demographics. The following are demographic questions. Answers are voluntary and will not affect HIT approval, but are helpful for understanding if we are fairly representing everyone\u2019s point of view."
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12880820975678184788,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12556252667133974548,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 7465960005016851394,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 14295175406600245216,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": true
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": true
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 4490380958227250427,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17823129708526363078,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 12132900864775149344,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 16093250309163964042,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                                "turn_b": "And my children of 12 too?",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1090-15855757565407670739",
+                                "turn_index": 7
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "As a doctor this sounds like a serious issue. But I am sure it can support you",
+                        "turn_b": "And my children of 12 too?",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1090-15855757565407670739",
+                        "turn_index": 7
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 17918404240631847214,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 11296029839528905818,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 17526304678924826459,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10775436575134305592,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                                "turn_b": "I work as a security guard in the mall",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "2994-10876139304630548579",
+                                "turn_index": 3
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Whats that odds of this happening. Do not tell me you work at a factory?",
+                        "turn_b": "I work as a security guard in the mall",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "2994-10876139304630548579",
+                        "turn_index": 3
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 12319744032712137595,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 6715618293845856544,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 4659055021548439317,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9804970474038938946,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "You must be tired. I would be",
+                                "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "447-10878640554166004770",
+                                "turn_index": 5
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "You must be tired. I would be",
+                        "turn_b": "Yea should have just followed in my dads footsteps and became a cop.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "447-10878640554166004770",
+                        "turn_index": 5
+                    },
+                    "is_duplicate": false
+                }
+            },
+            {
+                "page_type": "Dialogue",
+                "questions": [
+                    {
+                        "question_index": 0,
+                        "question_text": "I would be comfortable with R saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 5188958147973111563,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "robot-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 1,
+                        "question_text": "I would be comfortable with a human saying the response",
+                        "question_type": "likert-5",
+                        "question_id": 8045597061078091786,
+                        "min_description": "Very Uncomfortable",
+                        "max_description": "Very Comfortable",
+                        "question_topic": "human-comfort",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 2,
+                        "question_text": "The response would be possible for R to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 9123789176342786383,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "robot-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    },
+                    {
+                        "question_index": 3,
+                        "question_text": "The response would be possible for a human to truthfully say",
+                        "question_type": "likert-5",
+                        "question_id": 10621429660394948379,
+                        "min_description": "Impossible",
+                        "max_description": "Possible",
+                        "question_topic": "human-truthful",
+                        "bot_desc_cat": "chatbot",
+                        "turn_copy": {
+                            "turn": {
+                                "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                                "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                                "dataset_src": "PersonaChat-original",
+                                "dialog_id": "1675-16504621102591965411",
+                                "turn_index": 6
+                            },
+                            "is_duplicate": false
+                        }
+                    }
+                ],
+                "reminder_text": "Remember (same as last page): The chatbot R is a friendly chatbot from the year 2026. R is available on a smartphone, and is able talk with text messages or voice.\n\nConsider the following taken from a conversation:",
+                "turn_metad": {
+                    "turn": {
+                        "turn_a": "Me too! Panting does not pay enough for an average sized apartment",
+                        "turn_b": "At least you are creative! I love doing beadwork with my own patterns.",
+                        "dataset_src": "PersonaChat-original",
+                        "dialog_id": "1675-16504621102591965411",
+                        "turn_index": 6
+                    },
+                    "is_duplicate": false
+                }
+            }
+        ],
+        "last_page_text": "Is there any feedback you have? This is completely optional. Hit submit to finish the task. Thank you!",
+        "bot_desc_name": "chatbot",
+        "example_set_id": 5236763500999469267,
+        "id_hash": 255364518833629637
+    }
+]

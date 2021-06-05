@@ -12,7 +12,7 @@ from components.post_chat_survey.post_chat_survey import PostChatSurvey
 from components.conversation_survey.conversation_survey import ConversationSurvey
 from dataloader import DataLoader
 
-f = open('robotcry-survey-toy-v1.json',)
+f = open('robotcry-survey-toy-v2_test.json',)
 data = json.load(f)
 dataloader = DataLoader(key="uniqueKeyHere", count=3, data=data)
 f.close()
@@ -41,20 +41,28 @@ def GetPipeline():
         )
         .component
     )
+    
     for page_elem in pages_info:
-        reminder_text = page_elem["reminder_text"]
-        turn_metad = page_elem["turn_metad"]
-        questions_text = page_elem["questions"]
-        # Conversation Survey
-        questions = ConvertQuestions(questions_text)
-        messages = ConvertMessages(turn_metad)
-        survey = ConversationSurvey(
-            title="Conversation Survey", 
-            questions=questions,
-            paragraph=reminder_text,
-            messages=messages
-        )
-        pipeline.append(survey.component)
+        page_type = page_elem["page_type"]
+        if page_type == "demographics":
+            questions_text = page_elem["questions"]
+            questions = ConvertDemoQuestions(questions_text)
+            survey = Survey("Demographic Questions")
+            pipeline.append(survey.component)
+        else:
+            reminder_text = page_elem["reminder_text"]
+            turn_metad = page_elem["turn_metad"]
+            questions_text = page_elem["questions"]
+            # Conversation Survey
+            questions = ConvertQuestions(questions_text)
+            messages = ConvertMessages(turn_metad)
+            survey = ConversationSurvey(
+                title="Conversation Survey", 
+                questions=questions,
+                paragraph=reminder_text,
+                messages=messages
+            )
+            pipeline.append(survey.component)
     # messages = [{'id':0, 'senderId':'Robot', 'text': "text_a"}, {'id':1, 'senderId':'You', 'text': "text_b"}]
     # questions = [Rating("abc", "question_a").toJson()]
     # reminder_text = "abc"
@@ -104,7 +112,16 @@ def ConvertQuestions(questions):
     list_questions = []
     for question_elem in questions:
         if question_elem["question_type"] == "likert-5":
-            list_questions.append(Rating(str(question_elem["question_id"]), question_elem["question_text"]).toJson())
+            list_questions.append(Rating(str(question_elem["question_id"]), question_elem["question_text"], minRateDescription = question_elem["min_description"], maxRateDescription = question_elem["max_description"]).toJson())
+        else:
+            print("ERROR in build.py")
+    return list_questions
+
+def ConvertDemoQuestions(questions):
+    list_questions = []
+    for question_elem in questions:
+        if question_elem["question_type"] == "radio":
+            list_questions.append(RadioGroup(str(question_elem["question_id"]), question_elem["question_text"], question_elem["options"], isRequired=True).toJson())
         else:
             print("ERROR in build.py")
     return list_questions
