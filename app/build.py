@@ -48,6 +48,7 @@ def GetPipeline():
             questions_text = page_elem["questions"]
             questions = ConvertDemoQuestions(questions_text)
             survey = Survey("Demographic Questions")
+            survey.questions = questions
             pipeline.append(survey.component)
         else:
             reminder_text = page_elem["reminder_text"]
@@ -112,7 +113,7 @@ def ConvertQuestions(questions):
     list_questions = []
     for question_elem in questions:
         if question_elem["question_type"] == "likert-5":
-            list_questions.append(Rating(str(question_elem["question_id"]), question_elem["question_text"], minRateDescription = question_elem["min_description"], maxRateDescription = question_elem["max_description"]).toJson())
+            list_questions.append(Rating(str(question_elem["question_id"]), question_elem["question_text"], minRateDescription = question_elem["min_description"], maxRateDescription = question_elem["max_description"], isRequired=True).toJson())
         else:
             print("ERROR in build.py")
     return list_questions

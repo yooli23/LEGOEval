@@ -56,6 +56,7 @@ class Survey extends React.Component {
                 break;
             case "rating":
                 parsed = { type: question["type"], name: question["name"], title: question["title"],
+                        isRequired: question["isRequired"],
                         minRateDescription: question["minRateDescription"],
                         maxRateDescription: question["maxRateDescription"]};
                 break;

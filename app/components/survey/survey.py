@@ -62,12 +62,13 @@ class Text:
 
 class Rating:
 
-    def __init__(self, name, title, minRateDescription="", maxRateDescription=""):
+    def __init__(self, name, title, minRateDescription="", maxRateDescription="", isRequired=False,):
         self.type = "rating"
         self.name = name
         self.title = title
         self.minRateDescription = minRateDescription
         self.maxRateDescription = maxRateDescription
+        self.isRequired = isRequired
 
     def toJson(self):
         return json.dumps(self, default=lambda o: o.__dict__)
