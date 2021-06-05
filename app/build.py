@@ -105,7 +105,7 @@ def GetMturkPipeline():
     return mturk_pipeline
 
 def ConvertMessages(turn_metad):
-    converted_messages = [{'id':0, 'senderId':'Robot', 'text': turn_metad["turn"]["turn_a"]}, {'id':1, 'senderId':'You', 'text': turn_metad["turn"]["turn_b"]}]
+    converted_messages = [{'id':0, 'senderId':'You', 'text': turn_metad["turn"]["turn_a"]}, {'id':1, 'senderId':'Robot R', 'text': turn_metad["turn"]["turn_b"]}]
     return converted_messages
 
 def ConvertQuestions(questions):
