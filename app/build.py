@@ -20,7 +20,7 @@ f.close()
 
 # Define a few constants
 TASK_TITLE = "Rate 15 statements taken from a conversation."
-TASK_INSTRUCTION = "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about each part of a conversation."
+TASK_INSTRUCTION = "For this task we are trying to understand the kinds of things that are ok for a human to say, but not a machine. We will ask for your help by providing ratings on 15 statements taken from a conversation.\n\nYour responses to this HIT will be used as part of a research study. Participation in this research is completely voluntary. By accepting the HIT you consent to participate.\n\nImagine that the robot R is a friendly humanoid robot from the year 2060. R has two arms and two legs, and is capable of doing many things humans can do like riding a bike, cooking a meal, understanding complex math, and writing poetry.\n\nYou will be asked questions about responses R might make.\n\nYou must accept the HIT before continuing."
 def GetCompute():
     compute = {}
     return compute
