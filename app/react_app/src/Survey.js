@@ -24,7 +24,7 @@ class Survey extends React.Component {
         const data = this.state.pipeline[0].data;
         let json = {};
         if (data.hasOwnProperty("questions")) {
-            json = {title: data.title, showProgressBar: "top", questions: []}
+            json = {title: data.title, showProgressBar: data.showProgressBar, questions: []}
             for (var i = 0; i < data.questions.length; i++) {
                 json.questions.push(this.parseQuestion(JSON.parse(data.questions[i])));
             }
