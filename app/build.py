@@ -12,9 +12,9 @@ from components.post_chat_survey.post_chat_survey import PostChatSurvey
 from components.conversation_survey.conversation_survey import ConversationSurvey
 from dataloader import DataLoader
 
-f = open('robotcry-survey-toy-v2_test.json',)
+f = open('robotcry-survey-toy-v3.1_test.json',)
 data = json.load(f)
-dataloader = DataLoader(key="uniqueKeyHere", count=3, data=data)
+dataloader = DataLoader(key="v3", count=1, data=data)
 f.close()
 
 
@@ -54,11 +54,13 @@ def GetPipeline():
             reminder_text = page_elem["reminder_text"]
             turn_metad = page_elem["turn_metad"]
             questions_text = page_elem["questions"]
+            page_index = page_elem["page_index"]
             # Conversation Survey
             questions = ConvertQuestions(questions_text)
             messages = ConvertMessages(turn_metad)
+            title = "Conversation Survey " + str(page_index)
             survey = ConversationSurvey(
-                title="Conversation Survey", 
+                title=title, 
                 questions=questions,
                 paragraph=reminder_text,
                 messages=messages,
