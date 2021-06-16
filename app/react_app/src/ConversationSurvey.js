@@ -53,8 +53,11 @@ class ConversationSurvey extends React.Component {
     }
     
     _callBackFun(res_data) {
+      const data = res_data.data.pipeline[0].data
+      if (data.hasOwnProperty("messages")) {
         this.setState(res_data.data, function() {
         });
+      }
     }
 
     render() {

@@ -42,6 +42,17 @@ def GetPipeline():
         ).component
     )
 
+    #Conversation survey page
+    pipeline.append(
+        ConversationSurvey(
+            title="title", 
+            questions=[Comment("comment", "Please give feedback.").toJson()],
+            paragraph="reminder_text",
+            messages=[{'id':0, 'senderId':'You', 'text': "text_A"}, {'id':1, 'senderId':'Robot R', 'text': "text_B"}],
+            showProgressBar = "off"
+        ).component
+    )
+
     # Post Survey
     survey = Survey("post_survey")
     survey.title = "Post Survey"

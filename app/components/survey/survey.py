@@ -4,13 +4,14 @@ import json
 
 class Survey:
 
-    def __init__(self, title = ""):
+    def __init__(self, title = "", showProgressBar= "top"):
         self.title = title
         self.questions = []
+        self.showProgressBar = showProgressBar
 
     @property
     def component(self):
-        return Component("Survey", title=self.title, questions=self.questions)
+        return Component("Survey", title=self.title, questions=self.questions, showProgressBar=self.showProgressBar)
 
 
 """
