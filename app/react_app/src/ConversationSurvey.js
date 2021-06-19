@@ -68,7 +68,7 @@ class ConversationSurvey extends React.Component {
 
           <p style={{fontSize: 20, fontWeight: 'bold', textAlign: 'left'}}>{data.paragraph}</p>
            
-          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '20vh', flexDirection: 'column'}}>
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', flexDirection: 'column'}}>
             <MessageList messages={data.messages} />
           </div>
             <Survey advance={this.props.advance} _callBackFun={this._callBackFun}/>

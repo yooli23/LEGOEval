@@ -25,7 +25,7 @@ class LoadMTurk extends React.Component {
         return (
           <div>            
               <h1>{data.title}</h1>            
-              <p>{data.description}</p>
+              <p style={{fontSize:40, "white-space":"pre-line", "text-align":"left"}}>{data.description}</p>
               <Button onClick={this.requestMTurkInfo} variant="contained" color="primary">Start Task</Button>
           </div>
         );        
