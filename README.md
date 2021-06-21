@@ -56,3 +56,6 @@ If you use LEGOEval in your research, please cite [LEGOEval: An Open-Source Tool
       primaryClass={cs.AI}
 }
 ```
+## Contact Information
+For help or issues using LEGOEval, please submit a GitHub issue.
+For other communications related to LEGOEval, please contact Yu Li (`yooli@ucdavis.edu`)
