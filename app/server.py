@@ -4,6 +4,9 @@ from app import app, db
 from settings import server as config
 from state import State
 from main_loop import update as update_fn
+from components.submit_mturk.submit_mturk import SubmitMTurk
+
+import sys
 
 
 @app.before_first_request
@@ -30,7 +33,10 @@ def init(task_id):
 @app.route('/<task_id>/update', methods=['POST'])
 def update(task_id):
     state = State(task_id, data=request.json, flag_server_debug = False)   
-    state = update_fn(state, state.data.get('instruction', ''))
+    instruction = state.data.get('instruction', 'error')    
+    state = update_fn(state, instruction)
+    if instruction == 'advance': state.advance()        
+    if instruction == 'mark_complete': SubmitMTurk.mark_task_complete(state)    
     state.data.pop('instruction', None)
     state.save()    
     return state.data

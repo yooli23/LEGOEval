@@ -23,7 +23,9 @@ def GetCompute():
 def GetPipeline():
     pipeline = []
     compute = GetCompute() 
+
     ### ~~~ Build Your Task Below ~~~ ###
+
     # Instruction Page
     pipeline.append(
         Instruction(
@@ -38,18 +40,7 @@ def GetPipeline():
     pipeline.append(
         Chatbot("chatbot",
             instruction="Please chat with the first chatbot.",
-            force_human_message="Hi, first chatbot!"
-        ).component
-    )
-
-    #Conversation survey page
-    pipeline.append(
-        ConversationSurvey(
-            title="title", 
-            questions=[Comment("comment", "Please give feedback.").toJson()],
-            paragraph="reminder_text",
-            messages=[{'id':0, 'senderId':'You', 'text': "text_A"}, {'id':1, 'senderId':'Robot R', 'text': "text_B"}],
-            showProgressBar = "off"
+            force_human_message="Hi, chatbot!"
         ).component
     )
 
@@ -60,6 +51,7 @@ def GetPipeline():
     pipeline.append(survey.component)
 
     ### ~~~ End of Your Task ~~~ ###
+
     return pipeline
 
 def GetMturkPipeline():
