@@ -1,6 +1,6 @@
 server = {
     'server_secret_key': 'secret',   
-    'port': 5988,    
+    'port': 2988,    
 }
 
 mturk = {}
